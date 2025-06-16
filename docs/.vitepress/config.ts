@@ -24,6 +24,12 @@ export default defineConfig({
             { text: '数据库', link: '/basic/mysql' },
           ],
         }
+        // ,{
+        //   text: 'java 基础',
+        //   items: [
+        //     { text: 'java 基础', link: '/java/' },
+        //   ],
+        // }
 
       ],
 
@@ -35,7 +41,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'LeetCode 100题', link: '/algorithms/leetCode100' },
-              { text: '动态规划', link: '/algorithms/dp' },
+              // { text: '动态规划', link: '/algorithms/dp' },
               { text: '并查集', link: '/algorithms/unionFind' }
               // ... existing code ...
             ]

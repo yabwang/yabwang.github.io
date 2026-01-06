@@ -29,38 +29,17 @@ features:
   - icon: 📚
     title: 学习笔记
     details: 系统性知识整理 | 实战经验分享 | 技术深度解析
-    link: /basic/
+    link: /basic/mysql
   - icon: ⚡
     title: 性能优化
     details: 代码优化技巧 | 系统性能调优 | 最佳实践
-    link: /algorithms/
+    link: /algorithms/leetCode100
   - icon: 🔧
     title: 工程实践
     details: 开发工具 | 部署方案 | 监控运维
-    link: /system-design/
+    link: /system-design/index
 
 ---
-
-## 📊 博客统计
-
-<div class="stats-grid">
-  <div class="stat-card">
-    <div class="stat-number">100+</div>
-    <div class="stat-label">LeetCode题解</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">50+</div>
-    <div class="stat-label">技术文章</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">10+</div>
-    <div class="stat-label">系统设计</div>
-  </div>
-  <div class="stat-card">
-    <div class="stat-number">∞</div>
-    <div class="stat-label">持续更新</div>
-  </div>
-</div>
 
 ## 🚀 最新文章
 
@@ -84,37 +63,6 @@ features:
 
 
 <style>
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.stat-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 1.5rem;
-  border-radius: 12px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-5px);
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
 .recent-posts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -158,50 +106,9 @@ features:
   color: #764ba2;
 }
 
-.tech-stack {
-  margin: 2rem 0;
-}
-
-.tech-category {
-  margin-bottom: 1.5rem;
-}
-
-.tech-category h4 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-tag {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: transform 0.2s ease;
-}
-
-.tech-tag:hover {
-  transform: scale(1.05);
-}
-
 @media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
   .recent-posts {
     grid-template-columns: 1fr;
-  }
-  
-  .tech-tags {
-    justify-content: center;
   }
 }
 </style>

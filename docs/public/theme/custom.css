@@ -22,6 +22,8 @@
   padding: 80px 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .VPHomeHero .container {
@@ -71,10 +73,25 @@
   border: 1px solid #e9ecef;
 }
 
+.VPFeatures .item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 10;
+  position: relative;
+}
+
 .VPFeatures .item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand);
+}
+
+.VPFeatures .item:hover .title,
+.VPFeatures .item:hover .details {
+  color: var(--vp-c-brand);
 }
 
 .VPFeatures .icon {
@@ -108,6 +125,67 @@
 .VPNav .title {
   font-weight: bold;
   color: var(--vp-c-brand);
+}
+
+/* 右上角按钮修复 */
+.VPNavBarActions,
+.VPNavBarActions *,
+.VPNavBarSearch,
+.VPNavBarSearch *,
+.VPNavBarSearch .DocSearch-Button,
+.VPNavBarSearch button,
+.VPNavBarHamburger,
+.VPNavBarHamburger button,
+.VPSwitch,
+.VPSwitch *,
+.VPSwitchAppearance,
+.VPSwitchAppearance *,
+.VPNavBarMenu button,
+.VPNavBarMenu .button,
+.VPNavBar .button,
+.VPNavBar button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+  position: relative;
+}
+
+/* 确保搜索按钮可点击 */
+.VPNavBarSearchButton,
+.DocSearch-Button,
+.VPNavBarSearch .VPNavBarSearchButton {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+}
+
+/* 确保主题切换按钮可点击 */
+.VPSwitchAppearance button,
+.VPSwitch button {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+}
+
+/* 导航菜单链接修复 */
+.VPNavBarMenu .VPLink,
+.VPMenuLink .VPLink,
+.VPFlyout .VPLink {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  text-decoration: none;
+}
+
+.VPMenuLink {
+  pointer-events: auto !important;
+}
+
+.VPMenu .item {
+  pointer-events: auto !important;
+}
+
+.VPFlyout .menu {
+  pointer-events: auto !important;
 }
 
 /* 侧边栏优化 */
@@ -264,10 +342,59 @@ a {
   color: var(--vp-c-brand);
   text-decoration: none;
   transition: color 0.2s ease;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 a:hover {
   color: var(--vp-c-brand-light);
+}
+
+/* 确保导航链接可点击 */
+.VPNav a,
+.VPMenuLink a,
+.VPFlyout a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* 首页链接修复 */
+.post-link,
+.VPHomeHero .VPButton a,
+.VPHomeHero .actions a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 10;
+  position: relative;
+}
+
+.VPHomeHero .actions {
+  pointer-events: auto !important;
+  z-index: 10;
+  position: relative;
+}
+
+.VPHomeHero .VPButton {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 10;
+  position: relative;
+}
+
+.VPHomeHero .VPButton *,
+.VPHomeHero .actions * {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* 确保按钮链接可点击 */
+.VPHomeHero a,
+.VPHomeHero .VPButton,
+.VPHomeHero .actions .VPButton {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  z-index: 100 !important;
+  position: relative;
 }
 
 /* 按钮样式 */

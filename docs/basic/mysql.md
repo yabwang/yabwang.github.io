@@ -47,7 +47,8 @@
 ---
 
 ### **UPDATE 操作完整流程**
-![崩溃恢复流程图](/Innodbredlog.svg){width=800}
+<!-- TODO: 需要添加崩溃恢复流程图图片 /Innodbredlog.svg -->
+<!-- ![崩溃恢复流程图](/Innodbredlog.svg){width=800} -->
 
 ---
 

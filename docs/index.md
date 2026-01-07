@@ -401,6 +401,9 @@ features:
 <script>
 // 粒子背景动画
 (function() {
+  // 检查是否在浏览器环境中（避免 SSR 错误）
+  if (typeof document === 'undefined' || typeof window === 'undefined') return;
+  
   const canvas = document.getElementById('particleCanvas');
   if (!canvas) return;
   
@@ -487,6 +490,9 @@ features:
 
 // 数字动画
 (function() {
+  // 检查是否在浏览器环境中（避免 SSR 错误）
+  if (typeof document === 'undefined' || typeof window === 'undefined') return;
+  
   function animateValue(element, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {

@@ -5,13 +5,6 @@ hero:
   name: 技术探索者
   text: 技术博客导航
   tagline: 系统性整理计算机领域核心知识，分享算法、系统设计与工程实践
-  actions:
-    - theme: brand
-      text: 开始探索
-      link: /30-day-algorithm/
-    - theme: alt
-      text: 查看源码
-      link: https://github.com/yabwang/yabwang.github.io
 
 features:
   - icon: 🧮
@@ -40,7 +33,7 @@ features:
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
 
 <div class="recent-posts">
-  <div class="post-card tech-card">
+  <a href="/30-day-algorithm/day01" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
@@ -49,44 +42,11 @@ features:
       </div>
       <h3>30天算法挑战 - Day 1</h3>
       <p>数组基础与双指针技巧：两数之和、盛最多水的容器，从零开始系统学习算法</p>
-      <a href="/30-day-algorithm/day01" class="post-link">
-        <span>阅读全文</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-  </div>
-  
-  <div class="post-card tech-card">
-    <div class="card-glow"></div>
-    <div class="card-content">
-      <div class="card-header">
-        <span class="card-badge">HOT</span>
-        <span class="card-icon">🧮</span>
+      <div class="card-footer">
+        <span class="read-more">查看详情</span>
       </div>
-      <h3>LeetCode 100题精选</h3>
-      <p>精选LeetCode高频题目，涵盖数组、字符串、链表、树、动态规划等核心算法</p>
-      <a href="/algorithms/leetCode100" class="post-link">
-        <span>阅读全文</span>
-        <span class="arrow">→</span>
-      </a>
     </div>
-  </div>
-  
-  <div class="post-card tech-card">
-    <div class="card-glow"></div>
-    <div class="card-content">
-      <div class="card-header">
-        <span class="card-badge">PRO</span>
-        <span class="card-icon">🗄️</span>
-      </div>
-      <h3>MySQL事务实现机制</h3>
-      <p>深入解析MySQL事务的ACID特性、隔离级别和InnoDB存储引擎的实现原理</p>
-      <a href="/basic/mysql" class="post-link">
-        <span>阅读全文</span>
-        <span class="arrow">→</span>
-      </a>
-    </div>
-  </div>
+  </a>
 </div>
 
 <div class="tech-stats">
@@ -183,9 +143,10 @@ features:
 
 .recent-posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin: 2rem auto;
   gap: 2rem;
-  margin: 2rem 0;
 }
 
 .post-card.tech-card {
@@ -198,6 +159,9 @@ features:
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .post-card.tech-card::before {
@@ -276,53 +240,54 @@ features:
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.post-card.tech-card:hover h3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .post-card.tech-card p {
   color: #94a3b8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   line-height: 1.7;
   font-size: 0.95rem;
 }
 
-.post-link {
+.card-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.read-more {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   color: #667eea;
-  text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
-  position: relative;
+  opacity: 0.7;
 }
 
-.post-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  transition: width 0.3s ease;
+.post-card.tech-card:hover .read-more {
+  opacity: 1;
+  color: #a78bfa;
 }
 
-.post-link:hover::after {
-  width: 100%;
-}
-
-.post-link .arrow {
+.read-more::after {
+  content: '→';
   transition: transform 0.3s ease;
   display: inline-block;
+  margin-left: 0.25rem;
 }
 
-.post-link:hover .arrow {
-  transform: translateX(4px);
-}
-
-.post-link:hover {
-  color: #a78bfa;
+.post-card.tech-card:hover .read-more::after {
+  transform: translateX(6px);
 }
 
 .tech-stats {

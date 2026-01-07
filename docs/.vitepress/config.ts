@@ -48,10 +48,25 @@ const sidebar = {
   ...aiSidebar,
 };
 
+// 确保 AI 模块路径正确匹配（处理可能的路径格式差异）
+if (aiSidebar && Object.keys(aiSidebar).length > 0) {
+  // 如果 aiSidebar 有内容，确保所有可能的路径格式都被覆盖
+  const aiKeys = Object.keys(aiSidebar);
+  aiKeys.forEach(key => {
+    sidebar[key] = aiSidebar[key];
+    // 同时添加不带尾部斜杠的版本
+    if (key.endsWith('/')) {
+      sidebar[key.slice(0, -1)] = aiSidebar[key];
+    } else {
+      sidebar[key + '/'] = aiSidebar[key];
+    }
+  });
+}
+
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Yabin\'s Tech Journey',
-  description: '技术探索者的博客 - 分享算法、系统设计与工程实践',
+  description: '算法、java、AI',
   
   head: [
     ['meta', { name: 'keywords', content: '技术博客,算法,系统设计,数据库,LeetCode' }],

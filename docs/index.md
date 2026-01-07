@@ -26,18 +26,6 @@ features:
     title: 系统设计
     details: 高并发架构 | 分布式系统 | 云原生 | 微服务设计
     link: /system-design/index
-  - icon: 📚
-    title: 学习笔记
-    details: 系统性知识整理 | 实战经验分享 | 技术深度解析
-    link: /basic/mysql
-  - icon: ⚡
-    title: 性能优化
-    details: 代码优化技巧 | 系统性能调优 | 最佳实践
-    link: /algorithms/leetCode100
-  - icon: 🔧
-    title: 工程实践
-    details: 开发工具 | 部署方案 | 监控运维
-    link: /system-design/index
 
 ---
 

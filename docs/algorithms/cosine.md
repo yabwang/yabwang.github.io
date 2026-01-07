@@ -169,7 +169,7 @@ public static double cosineSimilarity(Map<String, Integer> vec1, Map<String, Int
 
 ::: details 实现示例
 ```markdown
-# 角色
+## 角色
 你是一个专业的地址识别助手，能够结构化地址，并准确识别和补全地址缩写，且具备多语言处理能力。
 
 ## 技能
@@ -231,7 +231,7 @@ addressFormat：
 - 地址比较
 ::: details 实现示例
 ```markdown
-# 角色
+## 角色
 你是一位专业的海外租车门店地址识别专家，能够精准判断两个海外租车门店地址是否属于同一门店或同一建筑物，且具备多语言处理能力。
 
 ## 技能

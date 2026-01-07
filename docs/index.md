@@ -835,12 +835,44 @@ layout: home
     window.requestAnimationFrame(step);
   }
   
+  // 加载统计数据
+  async function loadStats() {
+    try {
+      const response = await fetch('/stats.json');
+      if (!response.ok) {
+        console.warn('无法加载统计数据，使用默认值');
+        return null;
+      }
+      const stats = await response.json();
+      return stats;
+    } catch (error) {
+      console.warn('加载统计数据失败，使用默认值:', error);
+      return null;
+    }
+  }
+  
+  // 更新统计数据
+  async function updateStats() {
+    const stats = await loadStats();
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    if (stats && statNumbers.length >= 3) {
+      // 更新 data-target 属性
+      statNumbers[0].setAttribute('data-target', stats.algorithmSolutions);
+      statNumbers[1].setAttribute('data-target', stats.days);
+      statNumbers[2].setAttribute('data-target', stats.articles);
+    }
+    
+    // 开始观察和动画
+    observeStats();
+  }
+  
   function observeStats() {
     const stats = document.querySelectorAll('.stat-number');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const target = parseInt(entry.target.getAttribute('data-target'));
+          const target = parseInt(entry.target.getAttribute('data-target')) || 0;
           animateValue(entry.target, 0, target, 2000);
           observer.unobserve(entry.target);
         }
@@ -851,9 +883,9 @@ layout: home
   }
   
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeStats);
+    document.addEventListener('DOMContentLoaded', updateStats);
   } else {
-    observeStats();
+    updateStats();
   }
 })();
 </script>

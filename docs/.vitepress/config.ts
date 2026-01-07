@@ -1,8 +1,8 @@
 import { defineConfig } from 'vitepress';
 import { generateSidebar } from 'vitepress-sidebar';
 
-// 自动生成侧边栏配置 - 只展示30天刷题计划
-const sidebar = generateSidebar([
+// 自动生成侧边栏配置
+const algorithmSidebar = generateSidebar([
   {
     documentRootPath: '/docs',
     scanStartPath: '30-day-algorithm',
@@ -14,6 +14,39 @@ const sidebar = generateSidebar([
     collapsed: false,
   },
 ]);
+
+const interviewSidebar = generateSidebar([
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'interview',
+    resolvePath: '/interview/',
+    useTitleFromFileHeading: true,
+    useFolderTitleFromIndexFile: true,
+    sortMenusByFrontmatterOrder: true,
+    frontmatterOrderDefaultValue: 999,
+    collapsed: false,
+  },
+]);
+
+const aiSidebar = generateSidebar([
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'ai',
+    resolvePath: '/ai/',
+    useTitleFromFileHeading: true,
+    useFolderTitleFromIndexFile: true,
+    sortMenusByFrontmatterOrder: true,
+    frontmatterOrderDefaultValue: 999,
+    collapsed: false,
+  },
+]);
+
+// 合并侧边栏配置，VitePress 会根据当前路径自动匹配
+const sidebar = {
+  ...algorithmSidebar,
+  ...interviewSidebar,
+  ...aiSidebar,
+};
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -32,6 +65,8 @@ export default defineConfig({
     
     nav: [
       { text: '🚀 30天刷题计划', link: '/30-day-algorithm/' },
+      { text: '☕ Java 面试', link: '/interview/' },
+      { text: '🤖 AI 探索', link: '/ai/' },
     ],
 
     // 使用自动生成的侧边栏

@@ -50,18 +50,18 @@ const sidebar = {
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Wang\'s Blog',
+  title: 'Yabin\'s Tech Journey',
   description: '技术探索者的博客 - 分享算法、系统设计与工程实践',
   
   head: [
     ['meta', { name: 'keywords', content: '技术博客,算法,系统设计,数据库,LeetCode' }],
-    ['meta', { name: 'author', content: 'Wang' }],
-    ['meta', { property: 'og:title', content: 'Wang\'s Blog' }],
+    ['meta', { name: 'author', content: 'Wang Yabin' }],
+    ['meta', { property: 'og:title', content: 'Yabin\'s Tech Journey' }],
     ['meta', { property: 'og:description', content: '技术探索者的博客 - 分享算法、系统设计与工程实践' }],
   ],
 
   themeConfig: {
-    siteTitle: 'Wang\'s Blog',
+    siteTitle: 'Yabin\'s Tech Journey',
     
     nav: [
       { text: '🚀 30天刷题计划', link: '/30-day-algorithm/' },

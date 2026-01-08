@@ -86,11 +86,21 @@ export default defineConfig({
   title: 'Yabin\'s Tech Journey',
   description: '算法、java、AI',
   
+  // 禁用主题切换，强制使用深色模式
+  appearance: false,
+  
   head: [
     ['meta', { name: 'keywords', content: '技术博客,算法,系统设计,数据库,LeetCode' }],
     ['meta', { name: 'author', content: 'Wang Yabin' }],
     ['meta', { property: 'og:title', content: 'Yabin\'s Tech Journey' }],
     ['meta', { property: 'og:description', content: '技术探索者的博客 - 分享算法、系统设计与工程实践' }],
+    // 强制深色模式脚本
+    ['script', {}, `
+      (function() {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('vitepress-theme-appearance', 'dark');
+      })();
+    `],
   ],
 
   themeConfig: {

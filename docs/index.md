@@ -608,19 +608,39 @@ html.dark .section-title,
   text-shadow: 0 0 20px rgba(30, 41, 59, 0.2);
 }
 
-.dark .post-card.tech-card h3 {
-  color: #e2e8f0;
-  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-  text-shadow: 0 0 20px rgba(226, 232, 240, 0.3);
+/* 暗色模式样式 - 确保标题清晰可见 */
+.dark .post-card.tech-card h3,
+html.dark .post-card.tech-card h3,
+[data-theme="dark"] .post-card.tech-card h3 {
+  color: #e2e8f0 !important;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 25px rgba(226, 232, 240, 0.5) !important;
+  filter: brightness(1.1);
 }
 
 .post-card.tech-card:hover h3 {
-  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #8a2be2 100%);
+  /* 浅色主题悬停 */
+  background: linear-gradient(135deg, #0066cc 0%, #008855 50%, #6b21a8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+  text-shadow: 0 0 25px rgba(0, 102, 204, 0.5);
   transform: translateX(5px);
+}
+
+/* 暗色模式悬停样式 */
+.dark .post-card.tech-card:hover h3,
+html.dark .post-card.tech-card:hover h3,
+[data-theme="dark"] .post-card.tech-card:hover h3 {
+  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #a855f7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 35px rgba(0, 212, 255, 0.8) !important;
+  filter: brightness(1.2);
 }
 
 .post-card.tech-card p {

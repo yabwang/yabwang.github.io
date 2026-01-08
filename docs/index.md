@@ -91,16 +91,19 @@ layout: home
   margin: 4rem 0;
   border-radius: 20px;
   overflow: hidden;
-  /* 浅色主题默认样式 */
+  /* 浅色主题默认样式 - 增强未来感 */
   background: 
-    radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 30%, #cbd5e1 60%, #94a3b8 100%);
-  border: 2px solid rgba(0, 150, 255, 0.3);
+    radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(138, 43, 226, 0.2) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.15) 0%, transparent 70%),
+    linear-gradient(135deg, #ffffff 0%, #f0f4ff 20%, #e0eaff 40%, #d0e0ff 60%, #c0d6ff 80%, #b0ccff 100%);
+  border: 2px solid rgba(0, 150, 255, 0.4);
   box-shadow: 
-    0 0 40px rgba(0, 150, 255, 0.15),
-    0 0 80px rgba(138, 43, 226, 0.1),
-    inset 0 0 60px rgba(0, 150, 255, 0.05);
+    0 0 60px rgba(0, 150, 255, 0.3),
+    0 0 120px rgba(138, 43, 226, 0.2),
+    0 0 180px rgba(0, 255, 136, 0.15),
+    inset 0 0 80px rgba(0, 150, 255, 0.1),
+    0 8px 32px rgba(0, 150, 255, 0.2);
   animation: borderPulse 3s ease-in-out infinite;
 }
 
@@ -119,18 +122,22 @@ layout: home
 
 @keyframes borderPulse {
   0%, 100% {
-    border-color: rgba(0, 150, 255, 0.3);
-    box-shadow: 
-      0 0 40px rgba(0, 150, 255, 0.15),
-      0 0 80px rgba(138, 43, 226, 0.1),
-      inset 0 0 60px rgba(0, 150, 255, 0.05);
-  }
-  50% {
-    border-color: rgba(0, 150, 255, 0.6);
+    border-color: rgba(0, 150, 255, 0.4);
     box-shadow: 
       0 0 60px rgba(0, 150, 255, 0.3),
       0 0 120px rgba(138, 43, 226, 0.2),
-      inset 0 0 80px rgba(0, 150, 255, 0.1);
+      0 0 180px rgba(0, 255, 136, 0.15),
+      inset 0 0 80px rgba(0, 150, 255, 0.1),
+      0 8px 32px rgba(0, 150, 255, 0.2);
+  }
+  50% {
+    border-color: rgba(0, 150, 255, 0.7);
+    box-shadow: 
+      0 0 90px rgba(0, 150, 255, 0.5),
+      0 0 180px rgba(138, 43, 226, 0.35),
+      0 0 240px rgba(0, 255, 136, 0.25),
+      inset 0 0 100px rgba(0, 150, 255, 0.15),
+      0 12px 48px rgba(0, 150, 255, 0.3);
   }
 }
 
@@ -162,12 +169,22 @@ layout: home
   width: 100%;
   height: 100%;
   background-image: 
+    linear-gradient(rgba(0, 150, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 150, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+  opacity: 0.4;
+  animation: gridMove 20s linear infinite;
+  pointer-events: none;
+}
+
+.dark .grid-overlay {
+  background-image: 
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   opacity: 0.3;
-  animation: gridMove 20s linear infinite;
-  pointer-events: none;
 }
 
 @keyframes gridMove {
@@ -180,15 +197,29 @@ layout: home
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 150, 255, 0.9) 30%,
+    rgba(0, 255, 136, 0.9) 50%,
+    rgba(138, 43, 226, 0.9) 70%,
+    transparent 100%);
+  box-shadow: 
+    0 0 15px rgba(0, 150, 255, 0.8),
+    0 0 30px rgba(0, 255, 136, 0.6),
+    0 0 45px rgba(138, 43, 226, 0.4);
+  animation: scanMove 3s linear infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dark .scan-line {
   background: linear-gradient(90deg, 
     transparent 0%, 
     rgba(0, 255, 255, 0.8) 50%, 
     transparent 100%);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-  animation: scanMove 3s linear infinite;
-  pointer-events: none;
-  z-index: 2;
+  height: 2px;
 }
 
 @keyframes scanMove {
@@ -201,13 +232,22 @@ layout: home
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, transparent 70%);
+  width: 400px;
+  height: 400px;
+  background: 
+    radial-gradient(circle, rgba(0, 150, 255, 0.3) 0%, rgba(0, 255, 136, 0.2) 30%, rgba(138, 43, 226, 0.15) 50%, transparent 70%);
   border-radius: 50%;
   animation: glowPulse 4s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
+  filter: blur(20px);
+}
+
+.dark .hero-glow {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.2) 0%, transparent 70%);
+  filter: none;
 }
 
 @keyframes glowPulse {
@@ -247,8 +287,15 @@ layout: home
   font-size: 1.2rem;
   margin: 0.75rem 0;
   line-height: 1.8;
-  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  text-shadow: 
+    0 0 10px rgba(0, 150, 255, 0.6),
+    0 0 20px rgba(0, 150, 255, 0.4),
+    0 0 30px rgba(0, 255, 136, 0.3);
   animation: codeGlow 2s ease-in-out infinite;
+}
+
+.dark .code-line {
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
 }
 
 .code-keyword {
@@ -325,15 +372,25 @@ layout: home
   font-size: 2rem;
   font-weight: 700;
   margin: 4rem 0 2.5rem;
-  /* 浅色主题 */
-  background: linear-gradient(135deg, #0066cc 0%, #008855 50%, #6b21a8 100%);
+  /* 浅色主题 - 增强未来感 */
+  background: linear-gradient(135deg, #0066ff 0%, #00cc88 30%, #00ff99 50%, #8a2be2 70%, #0066ff 100%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
   padding-left: 1rem;
-  text-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
-  animation: titleShine 3s ease-in-out infinite;
+  text-shadow: 
+    0 0 20px rgba(0, 102, 255, 0.5),
+    0 0 40px rgba(0, 204, 136, 0.3),
+    0 0 60px rgba(138, 43, 226, 0.2);
+  animation: titleShine 3s ease-in-out infinite, gradientShift 5s ease infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.4));
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 /* 暗色模式样式 - 使用更亮的颜色确保可见性 */
@@ -354,13 +411,22 @@ html.dark .section-title,
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 60%;
-  /* 浅色主题 */
-  background: linear-gradient(180deg, #0066cc, #008855);
-  border-radius: 2px;
-  box-shadow: 0 0 8px rgba(0, 102, 204, 0.6);
-  animation: linePulse 2s ease-in-out infinite;
+  width: 5px;
+  height: 70%;
+  /* 浅色主题 - 增强光效 */
+  background: linear-gradient(180deg, #0066ff, #00cc88, #00ff99, #8a2be2);
+  background-size: 100% 200%;
+  border-radius: 3px;
+  box-shadow: 
+    0 0 10px rgba(0, 102, 255, 0.8),
+    0 0 20px rgba(0, 204, 136, 0.6),
+    0 0 30px rgba(138, 43, 226, 0.4);
+  animation: linePulse 2s ease-in-out infinite, lineGradient 3s ease infinite;
+}
+
+@keyframes lineGradient {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
 }
 
 .dark .section-title::before {
@@ -407,18 +473,20 @@ html.dark .section-title,
 
 .post-card.tech-card {
   position: relative;
-  /* 浅色主题 */
+  /* 浅色主题 - 增强未来感 */
   background: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(0, 150, 255, 0.2);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(240, 248, 255, 0.95) 50%, rgba(230, 240, 255, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 150, 255, 0.3);
   border-radius: 20px;
   padding: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(0, 150, 255, 0.1) inset;
+    0 8px 32px rgba(0, 150, 255, 0.15),
+    0 0 0 1px rgba(0, 150, 255, 0.2) inset,
+    0 0 40px rgba(0, 150, 255, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   display: block;
   color: inherit;
@@ -512,12 +580,14 @@ html.dark .section-title,
 
 .post-card.tech-card:hover {
   transform: translateY(-12px) scale(1.03) rotateX(2deg);
-  border-color: rgba(0, 150, 255, 0.6);
+  border-color: rgba(0, 150, 255, 0.8);
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.15),
-    0 0 40px rgba(0, 150, 255, 0.3),
-    0 0 80px rgba(0, 136, 85, 0.15),
-    inset 0 0 40px rgba(0, 150, 255, 0.05);
+    0 20px 60px rgba(0, 150, 255, 0.3),
+    0 0 60px rgba(0, 150, 255, 0.4),
+    0 0 100px rgba(0, 255, 136, 0.3),
+    0 0 140px rgba(138, 43, 226, 0.2),
+    inset 0 0 50px rgba(0, 150, 255, 0.1),
+    0 8px 32px rgba(0, 150, 255, 0.25);
 }
 
 .dark .post-card.tech-card:hover {
@@ -708,16 +778,17 @@ html.dark .post-card.tech-card:hover h3,
   gap: 2rem;
   margin: 5rem 0;
   padding: 2.5rem;
-  /* 浅色主题 */
+  /* 浅色主题 - 增强未来感 */
   background: 
-    linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
-  backdrop-filter: blur(15px);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 50%, rgba(230, 240, 255, 0.9) 100%);
+  backdrop-filter: blur(20px);
   border-radius: 20px;
-  border: 2px solid rgba(0, 150, 255, 0.2);
+  border: 2px solid rgba(0, 150, 255, 0.3);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(0, 150, 255, 0.1) inset,
-    0 0 40px rgba(0, 150, 255, 0.05);
+    0 8px 32px rgba(0, 150, 255, 0.2),
+    0 0 0 1px rgba(0, 150, 255, 0.2) inset,
+    0 0 60px rgba(0, 150, 255, 0.15),
+    0 4px 16px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -755,13 +826,16 @@ html.dark .post-card.tech-card:hover h3,
   text-align: center;
   padding: 2rem 1.5rem;
   border-radius: 16px;
-  /* 浅色主题 */
+  /* 浅色主题 - 增强未来感 */
   background: 
-    linear-gradient(135deg, rgba(0, 150, 255, 0.08) 0%, rgba(0, 136, 85, 0.05) 100%);
-  border: 1px solid rgba(0, 150, 255, 0.25);
+    linear-gradient(135deg, rgba(0, 150, 255, 0.12) 0%, rgba(0, 255, 136, 0.08) 50%, rgba(138, 43, 226, 0.06) 100%);
+  border: 1px solid rgba(0, 150, 255, 0.3);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 
+    0 4px 12px rgba(0, 150, 255, 0.1),
+    inset 0 0 20px rgba(0, 150, 255, 0.05);
 }
 
 .dark .stat-item {
@@ -792,12 +866,14 @@ html.dark .post-card.tech-card:hover h3,
 .stat-item:hover {
   transform: translateY(-8px) scale(1.05);
   background: 
-    linear-gradient(135deg, rgba(0, 150, 255, 0.15) 0%, rgba(0, 136, 85, 0.12) 100%);
-  border-color: rgba(0, 150, 255, 0.5);
+    linear-gradient(135deg, rgba(0, 150, 255, 0.2) 0%, rgba(0, 255, 136, 0.15) 50%, rgba(138, 43, 226, 0.12) 100%);
+  border-color: rgba(0, 150, 255, 0.6);
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.15),
-    0 0 30px rgba(0, 150, 255, 0.3),
-    0 0 60px rgba(0, 136, 85, 0.15);
+    0 12px 40px rgba(0, 150, 255, 0.25),
+    0 0 40px rgba(0, 150, 255, 0.4),
+    0 0 70px rgba(0, 255, 136, 0.3),
+    0 0 100px rgba(138, 43, 226, 0.2),
+    inset 0 0 30px rgba(0, 150, 255, 0.1);
 }
 
 .dark .stat-item:hover {
@@ -813,15 +889,20 @@ html.dark .post-card.tech-card:hover h3,
 .stat-number {
   font-size: 3rem;
   font-weight: 800;
-  /* 浅色主题 */
-  background: linear-gradient(135deg, #0066cc 0%, #008855 50%, #6b21a8 100%);
+  /* 浅色主题 - 增强未来感 */
+  background: linear-gradient(135deg, #0066ff 0%, #00cc88 30%, #00ff99 50%, #8a2be2 70%, #0066ff 100%);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
-  filter: drop-shadow(0 0 8px rgba(0, 102, 204, 0.2));
+  text-shadow: 
+    0 0 20px rgba(0, 102, 255, 0.5),
+    0 0 40px rgba(0, 204, 136, 0.3),
+    0 0 60px rgba(138, 43, 226, 0.2);
+  filter: drop-shadow(0 0 12px rgba(0, 102, 255, 0.4));
   transition: all 0.4s ease;
+  animation: gradientShift 5s ease infinite;
 }
 
 /* 暗色模式样式 */

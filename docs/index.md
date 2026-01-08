@@ -336,9 +336,16 @@ layout: home
   animation: titleShine 3s ease-in-out infinite;
 }
 
-.dark .section-title {
-  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #8a2be2 100%);
-  text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+/* 暗色模式样式 - 使用更亮的颜色确保可见性 */
+.dark .section-title,
+html.dark .section-title,
+[data-theme="dark"] .section-title {
+  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #a855f7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.8) !important;
+  filter: brightness(1.2);
 }
 
 .section-title::before {
@@ -786,14 +793,27 @@ layout: home
 .stat-number {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #8a2be2 100%);
+  /* 浅色主题 */
+  background: linear-gradient(135deg, #0066cc 0%, #008855 50%, #6b21a8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
-  text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+  text-shadow: 0 0 20px rgba(0, 102, 204, 0.3);
+  filter: drop-shadow(0 0 8px rgba(0, 102, 204, 0.2));
   transition: all 0.4s ease;
+}
+
+/* 暗色模式样式 */
+.dark .stat-number,
+html.dark .stat-number,
+[data-theme="dark"] .stat-number {
+  background: linear-gradient(135deg, #00d4ff 0%, #00ff88 50%, #a855f7 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.8) !important;
+  filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.5)) brightness(1.2) !important;
 }
 
 .stat-item:hover .stat-number {

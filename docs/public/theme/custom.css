@@ -254,11 +254,60 @@ html.dark body::after {
 }
 
 /* 确保内容在背景之上 */
-#app,
-.VPContent,
+#app {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.VPContent {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
 .vp-doc {
   position: relative;
   z-index: 1;
+  background: transparent;
+}
+
+/* 覆盖 VitePress 默认背景色 - 使用暗色系 */
+.VPContent .container,
+.VPContent .content,
+.vp-doc .container {
+  background: transparent;
+}
+
+/* 确保所有内容区域都是透明背景 */
+main,
+.VPMain,
+.VPPage {
+  background: transparent !important;
+}
+
+/* 覆盖 VitePress 默认的白色背景 */
+.VPContent,
+.VPContent > *,
+.vp-doc,
+.vp-doc > * {
+  background: transparent !important;
+}
+
+/* 确保文档容器也是透明 */
+.VPDocOutline,
+.VPDocAside {
+  background: transparent;
+}
+
+/* 覆盖可能的白色背景 */
+html {
+  background: transparent;
+}
+
+/* 确保 Layout 也是透明 */
+.Layout {
+  background: transparent;
 }
 
 /* 首页英雄区域优化 */

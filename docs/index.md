@@ -50,6 +50,21 @@ layout: home
       </div>
     </div>
   </a>
+  
+  <a href="/others/" class="post-card tech-card">
+    <div class="card-glow"></div>
+    <div class="card-content">
+      <div class="card-header">
+        <span class="card-badge">📚</span>
+        <span class="card-icon">📝</span>
+      </div>
+      <h3>其他技术文章</h3>
+      <p>收录算法、数据结构、数据库、编码等各个方面的技术文章，持续更新中</p>
+      <div class="card-footer">
+        <span class="read-more">查看详情</span>
+      </div>
+    </div>
+  </a>
 </div>
 
 <div class="tech-stats">

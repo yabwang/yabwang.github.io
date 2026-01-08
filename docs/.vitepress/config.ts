@@ -41,27 +41,45 @@ const aiSidebar = generateSidebar([
   },
 ]);
 
+const othersSidebar = generateSidebar([
+  {
+    documentRootPath: '/docs',
+    scanStartPath: 'others',
+    resolvePath: '/others/',
+    useTitleFromFileHeading: true,
+    useFolderTitleFromIndexFile: true,
+    sortMenusByFrontmatterOrder: true,
+    frontmatterOrderDefaultValue: 999,
+    collapsed: false,
+  },
+]);
+
 // 合并侧边栏配置，VitePress 会根据当前路径自动匹配
 const sidebar = {
   ...algorithmSidebar,
   ...interviewSidebar,
   ...aiSidebar,
+  ...othersSidebar,
 };
 
-// 确保 AI 模块路径正确匹配（处理可能的路径格式差异）
-if (aiSidebar && Object.keys(aiSidebar).length > 0) {
-  // 如果 aiSidebar 有内容，确保所有可能的路径格式都被覆盖
-  const aiKeys = Object.keys(aiSidebar);
-  aiKeys.forEach(key => {
-    sidebar[key] = aiSidebar[key];
-    // 同时添加不带尾部斜杠的版本
-    if (key.endsWith('/')) {
-      sidebar[key.slice(0, -1)] = aiSidebar[key];
-    } else {
-      sidebar[key + '/'] = aiSidebar[key];
-    }
-  });
+// 确保模块路径正确匹配（处理可能的路径格式差异）
+function ensurePathMatch(sidebarConfig, targetSidebar) {
+  if (targetSidebar && Object.keys(targetSidebar).length > 0) {
+    const keys = Object.keys(targetSidebar);
+    keys.forEach(key => {
+      targetSidebar[key] = targetSidebar[key];
+      // 同时添加不带尾部斜杠的版本
+      if (key.endsWith('/')) {
+        sidebar[key.slice(0, -1)] = targetSidebar[key];
+      } else {
+        sidebar[key + '/'] = targetSidebar[key];
+      }
+    });
+  }
 }
+
+ensurePathMatch(sidebar, aiSidebar);
+ensurePathMatch(sidebar, othersSidebar);
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -82,6 +100,7 @@ export default defineConfig({
       { text: '🚀 30天刷题计划', link: '/30-day-algorithm/' },
       { text: '☕ Java 面试', link: '/interview/' },
       { text: '🤖 AI 探索', link: '/ai/' },
+      { text: '📝 其他文章', link: '/others/' },
     ],
 
     // 使用自动生成的侧边栏

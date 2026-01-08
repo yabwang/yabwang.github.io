@@ -17,7 +17,7 @@
   --vp-custom-block-danger-border: #ef4444;
 }
 
-/* 页面背景优化 - 科技感 */
+/* 页面背景优化 - 暗色系科技感 */
 body {
   background: 
     /* 电路板图案 */
@@ -25,23 +25,23 @@ body {
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 150, 255, 0.06) 2px,
-      rgba(0, 150, 255, 0.06) 4px
+      rgba(0, 255, 255, 0.08) 2px,
+      rgba(0, 255, 255, 0.08) 4px
     ),
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 150, 255, 0.06) 2px,
-      rgba(0, 150, 255, 0.06) 4px
+      rgba(0, 255, 255, 0.08) 2px,
+      rgba(0, 255, 255, 0.08) 4px
     ),
     /* 网格背景 */
-    linear-gradient(rgba(0, 150, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 150, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     /* 点阵背景 */
-    radial-gradient(circle at 1px 1px, rgba(0, 150, 255, 0.12) 1px, transparent 0),
-    /* 渐变背景 - 增强对比度 */
-    linear-gradient(135deg, #e8f0ff 0%, #d0e0ff 25%, #c0d6ff 50%, #d0e0ff 75%, #e8f0ff 100%);
+    radial-gradient(circle at 1px 1px, rgba(0, 255, 255, 0.15) 1px, transparent 0),
+    /* 暗色系渐变背景 */
+    linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 25%, #16213e 50%, #1a1f2e 75%, #0a0e1a 100%);
   background-size: 
     20px 20px,
     20px 20px,
@@ -53,6 +53,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  color: #e2e8f0;
 }
 
 body::before {
@@ -63,27 +64,27 @@ body::before {
   width: 100%;
   height: 100%;
   background: 
-    /* 数据流线条 - 增强可见性 */
+    /* 数据流线条 - 暗色系科技感 */
     repeating-linear-gradient(
       45deg,
       transparent,
       transparent 10px,
-      rgba(0, 150, 255, 0.08) 10px,
-      rgba(0, 150, 255, 0.08) 20px
+      rgba(0, 255, 255, 0.12) 10px,
+      rgba(0, 255, 255, 0.12) 20px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 10px,
-      rgba(0, 255, 136, 0.06) 10px,
-      rgba(0, 255, 136, 0.06) 20px
+      rgba(0, 255, 136, 0.1) 10px,
+      rgba(0, 255, 136, 0.1) 20px
     ),
-    /* 光效 - 增强亮度和对比度 */
-    radial-gradient(circle at 20% 30%, rgba(0, 150, 255, 0.2) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 0% 0%, rgba(0, 150, 255, 0.18) 0%, transparent 30%),
-    radial-gradient(ellipse at 100% 100%, rgba(138, 43, 226, 0.15) 0%, transparent 30%);
+    /* 光效 - 暗色系增强 */
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 0% 0%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
+    radial-gradient(ellipse at 100% 100%, rgba(138, 43, 226, 0.18) 0%, transparent 30%);
   background-size: 
     200px 200px,
     200px 200px,
@@ -95,7 +96,7 @@ body::before {
   pointer-events: none;
   z-index: 0;
   animation: backgroundPulse 20s ease-in-out infinite, backgroundMove 30s linear infinite;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 body::after {
@@ -106,25 +107,25 @@ body::after {
   width: 100%;
   height: 100%;
   background: 
-    /* 六边形图案 - 增强可见性 */
+    /* 六边形图案 - 暗色系 */
     repeating-linear-gradient(
       60deg,
       transparent,
       transparent 50px,
-      rgba(0, 150, 255, 0.06) 50px,
-      rgba(0, 150, 255, 0.06) 52px
+      rgba(0, 255, 255, 0.1) 50px,
+      rgba(0, 255, 255, 0.1) 52px
     ),
     repeating-linear-gradient(
       -60deg,
       transparent,
       transparent 50px,
-      rgba(0, 255, 136, 0.05) 50px,
-      rgba(0, 255, 136, 0.05) 52px
+      rgba(0, 255, 136, 0.08) 50px,
+      rgba(0, 255, 136, 0.08) 52px
     );
   background-size: 100px 100px;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.6;
+  opacity: 0.7;
   animation: patternRotate 40s linear infinite;
 }
 

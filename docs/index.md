@@ -314,26 +314,6 @@ layout: home
   }
 }
 
-.dark .tech-hero-wrapper {
-  animation: borderPulseDark 3s ease-in-out infinite;
-}
-
-@keyframes borderPulseDark {
-  0%, 100% {
-    border-color: rgba(0, 255, 255, 0.3);
-    box-shadow: 
-      0 0 40px rgba(0, 255, 255, 0.2),
-      0 0 80px rgba(138, 43, 226, 0.15),
-      inset 0 0 60px rgba(0, 255, 255, 0.05);
-  }
-  50% {
-    border-color: rgba(0, 255, 255, 0.6);
-    box-shadow: 
-      0 0 60px rgba(0, 255, 255, 0.4),
-      0 0 120px rgba(138, 43, 226, 0.3),
-      inset 0 0 80px rgba(0, 255, 255, 0.1);
-  }
-}
 
 .grid-overlay {
   position: absolute;

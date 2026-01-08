@@ -6,6 +6,11 @@ layout: home
 <div class="tech-hero-wrapper">
   <div class="grid-overlay"></div>
   <div class="scan-line"></div>
+  <div class="data-stream"></div>
+  <div class="corner-decoration top-left"></div>
+  <div class="corner-decoration top-right"></div>
+  <div class="corner-decoration bottom-left"></div>
+  <div class="corner-decoration bottom-right"></div>
   <canvas id="particleCanvas"></canvas>
   <div class="tech-hero-content">
     <div class="code-line">
@@ -16,6 +21,7 @@ layout: home
     </div>
   </div>
   <div class="hero-glow"></div>
+  <div class="tech-pattern"></div>
 </div>
 
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
@@ -105,6 +111,185 @@ layout: home
     inset 0 0 80px rgba(0, 150, 255, 0.1),
     0 8px 32px rgba(0, 150, 255, 0.2);
   animation: borderPulse 3s ease-in-out infinite;
+}
+
+/* 数据流效果 */
+.data-stream {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 150, 255, 0.1) 2px,
+    rgba(0, 150, 255, 0.1) 4px,
+    transparent 4px,
+    transparent 6px,
+    rgba(0, 255, 136, 0.08) 6px,
+    rgba(0, 255, 136, 0.08) 8px
+  );
+  animation: dataStream 8s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes dataStream {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* 角落装饰 */
+.corner-decoration {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.corner-decoration::before,
+.corner-decoration::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(135deg, rgba(0, 150, 255, 0.8), rgba(0, 255, 136, 0.6));
+  box-shadow: 
+    0 0 10px rgba(0, 150, 255, 0.8),
+    0 0 20px rgba(0, 255, 136, 0.6);
+}
+
+.corner-decoration.top-left {
+  top: 10px;
+  left: 10px;
+  border-top: 3px solid rgba(0, 150, 255, 0.8);
+  border-left: 3px solid rgba(0, 150, 255, 0.8);
+  border-top-left-radius: 10px;
+}
+
+.corner-decoration.top-left::before {
+  top: -3px;
+  left: -3px;
+  width: 20px;
+  height: 3px;
+  animation: cornerGlow 2s ease-in-out infinite;
+}
+
+.corner-decoration.top-left::after {
+  top: -3px;
+  left: -3px;
+  width: 3px;
+  height: 20px;
+  animation: cornerGlow 2s ease-in-out infinite 0.1s;
+}
+
+.corner-decoration.top-right {
+  top: 10px;
+  right: 10px;
+  border-top: 3px solid rgba(0, 150, 255, 0.8);
+  border-right: 3px solid rgba(0, 150, 255, 0.8);
+  border-top-right-radius: 10px;
+}
+
+.corner-decoration.top-right::before {
+  top: -3px;
+  right: -3px;
+  width: 20px;
+  height: 3px;
+  animation: cornerGlow 2s ease-in-out infinite 0.2s;
+}
+
+.corner-decoration.top-right::after {
+  top: -3px;
+  right: -3px;
+  width: 3px;
+  height: 20px;
+  animation: cornerGlow 2s ease-in-out infinite 0.3s;
+}
+
+.corner-decoration.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 3px solid rgba(0, 150, 255, 0.8);
+  border-left: 3px solid rgba(0, 150, 255, 0.8);
+  border-bottom-left-radius: 10px;
+}
+
+.corner-decoration.bottom-left::before {
+  bottom: -3px;
+  left: -3px;
+  width: 20px;
+  height: 3px;
+  animation: cornerGlow 2s ease-in-out infinite 0.4s;
+}
+
+.corner-decoration.bottom-left::after {
+  bottom: -3px;
+  left: -3px;
+  width: 3px;
+  height: 20px;
+  animation: cornerGlow 2s ease-in-out infinite 0.5s;
+}
+
+.corner-decoration.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 3px solid rgba(0, 150, 255, 0.8);
+  border-right: 3px solid rgba(0, 150, 255, 0.8);
+  border-bottom-right-radius: 10px;
+}
+
+.corner-decoration.bottom-right::before {
+  bottom: -3px;
+  right: -3px;
+  width: 20px;
+  height: 3px;
+  animation: cornerGlow 2s ease-in-out infinite 0.6s;
+}
+
+.corner-decoration.bottom-right::after {
+  bottom: -3px;
+  right: -3px;
+  width: 3px;
+  height: 20px;
+  animation: cornerGlow 2s ease-in-out infinite 0.7s;
+}
+
+@keyframes cornerGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* 科技图案背景 */
+.tech-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.08) 0%, transparent 60%);
+  background-size: 200% 200%;
+  animation: patternMove 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@keyframes patternMove {
+  0%, 100% { background-position: 0% 0%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
 }
 
 /* 暗色主题样式 */
@@ -511,13 +696,22 @@ html.dark .section-title,
   right: -2px;
   bottom: -2px;
   background: linear-gradient(45deg, 
-    #00d4ff, #00ff88, #8a2be2, #00d4ff);
+    #0066ff, #00cc88, #00ff99, #8a2be2, #0066ff);
   border-radius: 20px;
   opacity: 0;
   z-index: -1;
   transition: opacity 0.5s;
+  background-size: 400% 400%;
+  animation: borderRotate 4s linear infinite;
+  filter: blur(1px);
+}
+
+.dark .post-card.tech-card::after {
+  background: linear-gradient(45deg, 
+    #00d4ff, #00ff88, #8a2be2, #00d4ff);
   background-size: 300% 300%;
   animation: borderRotate 3s linear infinite;
+  filter: none;
 }
 
 .post-card.tech-card:hover::after {
@@ -539,10 +733,21 @@ html.dark .section-title,
   height: 100%;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(0, 212, 255, 0.3) 50%, 
+    rgba(0, 150, 255, 0.4) 30%,
+    rgba(0, 255, 136, 0.5) 50%,
+    rgba(138, 43, 226, 0.4) 70%,
     transparent 100%);
   transition: left 0.8s;
   z-index: 1;
+  filter: blur(10px);
+}
+
+.dark .post-card.tech-card::before {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 212, 255, 0.3) 50%, 
+    transparent 100%);
+  filter: none;
 }
 
 .post-card.tech-card:hover::before {
@@ -557,14 +762,24 @@ html.dark .section-title,
   width: 200%;
   height: 200%;
   background: radial-gradient(circle, 
-    rgba(0, 212, 255, 0.4) 0%, 
-    rgba(0, 255, 136, 0.2) 30%,
-    rgba(138, 43, 226, 0.1) 60%,
+    rgba(0, 150, 255, 0.5) 0%, 
+    rgba(0, 255, 136, 0.3) 30%,
+    rgba(138, 43, 226, 0.2) 60%,
     transparent 100%);
   opacity: 0;
   transition: opacity 0.6s, transform 0.6s;
   pointer-events: none;
   z-index: 0;
+  filter: blur(30px);
+}
+
+.dark .card-glow {
+  background: radial-gradient(circle, 
+    rgba(0, 212, 255, 0.4) 0%, 
+    rgba(0, 255, 136, 0.2) 30%,
+    rgba(138, 43, 226, 0.1) 60%,
+    transparent 100%);
+  filter: none;
 }
 
 .post-card.tech-card:hover .card-glow {
@@ -812,9 +1027,20 @@ html.dark .post-card.tech-card:hover h3,
   height: 100%;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(0, 212, 255, 0.1) 50%, 
+    rgba(0, 150, 255, 0.2) 30%,
+    rgba(0, 255, 136, 0.25) 50%,
+    rgba(138, 43, 226, 0.2) 70%,
     transparent 100%);
   animation: statsScan 4s linear infinite;
+  filter: blur(15px);
+}
+
+.dark .tech-stats::before {
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 212, 255, 0.1) 50%, 
+    transparent 100%);
+  filter: none;
 }
 
 @keyframes statsScan {
@@ -991,34 +1217,51 @@ html.dark .stat-number,
   
   function createParticles() {
     particles = [];
-    const particleCount = Math.min(80, Math.floor((canvas.width * canvas.height) / 12000));
+    const particleCount = Math.min(120, Math.floor((canvas.width * canvas.height) / 8000));
+    
+    // 检测是否为暗色模式
+    const isDark = document.documentElement.classList.contains('dark');
     
     for (let i = 0; i < particleCount; i++) {
       const colorType = Math.random();
       let color;
-      if (colorType < 0.4) {
-        color = { r: 0, g: 212, b: 255 }; // 青色
-      } else if (colorType < 0.7) {
-        color = { r: 0, g: 255, b: 136 }; // 绿色
+      if (isDark) {
+        // 暗色模式颜色
+        if (colorType < 0.4) {
+          color = { r: 0, g: 212, b: 255 }; // 青色
+        } else if (colorType < 0.7) {
+          color = { r: 0, g: 255, b: 136 }; // 绿色
+        } else {
+          color = { r: 138, g: 43, b: 226 }; // 紫色
+        }
       } else {
-        color = { r: 138, g: 43, b: 226 }; // 紫色
+        // 浅色模式颜色 - 更鲜艳
+        if (colorType < 0.4) {
+          color = { r: 0, g: 150, b: 255 }; // 亮蓝色
+        } else if (colorType < 0.7) {
+          color = { r: 0, g: 255, b: 136 }; // 亮绿色
+        } else {
+          color = { r: 138, g: 43, b: 226 }; // 紫色
+        }
       }
       
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 2.5 + 0.5,
-        speedX: (Math.random() - 0.5) * 0.8,
-        speedY: (Math.random() - 0.5) * 0.8,
-        opacity: Math.random() * 0.6 + 0.4,
+        radius: Math.random() * 3 + 0.8,
+        speedX: (Math.random() - 0.5) * 1.2,
+        speedY: (Math.random() - 0.5) * 1.2,
+        opacity: Math.random() * 0.8 + 0.4,
         color: color,
-        glow: Math.random() * 0.5 + 0.5
+        glow: Math.random() * 0.7 + 0.5,
+        pulse: Math.random() * Math.PI * 2 // 脉冲相位
       });
     }
   }
   
   function drawParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const time = Date.now() * 0.001;
     
     particles.forEach((particle, i) => {
       // 更新位置
@@ -1029,34 +1272,43 @@ html.dark .stat-number,
       if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
       if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
       
-      // 绘制粒子光晕
+      // 脉冲效果
+      const pulseSize = 1 + Math.sin(time * 2 + particle.pulse) * 0.3;
+      const currentRadius = particle.radius * pulseSize;
+      const currentOpacity = particle.opacity * (0.7 + Math.sin(time * 3 + particle.pulse) * 0.3);
+      
+      // 绘制粒子光晕 - 增强光效
       const gradient = ctx.createRadialGradient(
         particle.x, particle.y, 0,
-        particle.x, particle.y, particle.radius * 3
+        particle.x, particle.y, currentRadius * 5
       );
-      gradient.addColorStop(0, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity})`);
-      gradient.addColorStop(0.5, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.opacity * 0.5})`);
+      gradient.addColorStop(0, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity})`);
+      gradient.addColorStop(0.3, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity * 0.6})`);
+      gradient.addColorStop(0.6, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity * 0.3})`);
       gradient.addColorStop(1, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0)`);
       
       ctx.beginPath();
-      ctx.arc(particle.x, particle.y, particle.radius * 3, 0, Math.PI * 2);
+      ctx.arc(particle.x, particle.y, currentRadius * 5, 0, Math.PI * 2);
       ctx.fillStyle = gradient;
       ctx.fill();
       
-      // 绘制粒子核心
+      // 绘制粒子核心 - 增强亮度
       ctx.beginPath();
-      ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+      ctx.arc(particle.x, particle.y, currentRadius, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 1)`;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0.8)`;
       ctx.fill();
+      ctx.shadowBlur = 0;
       
-      // 绘制连线
+      // 绘制连线 - 增强可见性
       particles.slice(i + 1).forEach(otherParticle => {
         const dx = particle.x - otherParticle.x;
         const dy = particle.y - otherParticle.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < 120) {
-          const opacity = (1 - distance / 120) * 0.3;
+        if (distance < 150) {
+          const opacity = (1 - distance / 150) * 0.4;
           const midR = Math.floor((particle.color.r + otherParticle.color.r) / 2);
           const midG = Math.floor((particle.color.g + otherParticle.color.g) / 2);
           const midB = Math.floor((particle.color.b + otherParticle.color.b) / 2);
@@ -1065,9 +1317,9 @@ html.dark .stat-number,
           ctx.moveTo(particle.x, particle.y);
           ctx.lineTo(otherParticle.x, otherParticle.y);
           ctx.strokeStyle = `rgba(${midR}, ${midG}, ${midB}, ${opacity})`;
-          ctx.lineWidth = 1.5;
-          ctx.shadowBlur = 5;
-          ctx.shadowColor = `rgba(${midR}, ${midG}, ${midB}, ${opacity})`;
+          ctx.lineWidth = 2;
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = `rgba(${midR}, ${midG}, ${midB}, ${opacity * 0.8})`;
           ctx.stroke();
           ctx.shadowBlur = 0;
         }

@@ -15,18 +15,37 @@ const algorithmSidebar = generateSidebar([
   },
 ]);
 
-const interviewSidebar = generateSidebar([
-  {
-    documentRootPath: '/docs',
-    scanStartPath: 'interview',
-    resolvePath: '/interview/',
-    useTitleFromFileHeading: true,
-    useFolderTitleFromIndexFile: true,
-    sortMenusByFrontmatterOrder: true,
-    frontmatterOrderDefaultValue: 999,
-    collapsed: false,
-  },
-]);
+// 手动配置 interview 侧边栏，实现分组结构
+const interviewSidebar = {
+  '/interview/': [
+    {
+      text: 'Java程序员面试学习大纲',
+      link: '/interview/java-interview-outline',
+    },
+    {
+      text: '☕ Java 面试学习',
+      link: '/interview/',
+    },
+    {
+      text: 'Java基础',
+      collapsed: false,
+      items: [
+        {
+          text: '语言特性',
+          link: '/interview/java-basics-language-features',
+        },
+        {
+          text: '集合框架',
+          link: '/interview/java-basics-collections',
+        },
+        {
+          text: 'IO/NIO',
+          link: '/interview/java-basics-io-nio',
+        },
+      ],
+    },
+  ],
+};
 
 const aiSidebar = generateSidebar([
   {
@@ -78,6 +97,7 @@ function ensurePathMatch(sidebarConfig, targetSidebar) {
   }
 }
 
+ensurePathMatch(sidebar, interviewSidebar);
 ensurePathMatch(sidebar, aiSidebar);
 ensurePathMatch(sidebar, othersSidebar);
 

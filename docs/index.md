@@ -829,7 +829,7 @@ layout: home
     0 0 60px rgba(0, 255, 255, 0.2),
     0 4px 16px rgba(0, 0, 0, 0.3);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .tech-stats::before {
@@ -865,7 +865,7 @@ layout: home
   border: 1px solid rgba(0, 255, 255, 0.3);
   transition: all 0.4s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 
     0 4px 12px rgba(0, 0, 0, 0.3),
     inset 0 0 20px rgba(0, 255, 255, 0.08);
@@ -884,6 +884,7 @@ layout: home
     transparent 100%);
   transform: scaleX(0);
   transition: transform 0.4s;
+  z-index: 1;
 }
 
 .stat-item:hover::before {
@@ -906,6 +907,7 @@ layout: home
 .stat-number {
   font-size: 3rem;
   font-weight: 800;
+  line-height: 1.2;
   /* 暗色系科技感 */
   background: linear-gradient(135deg, #00d4ff 0%, #00ff88 30%, #a855f7 50%, #00d4ff 100%);
   background-size: 200% 200%;
@@ -920,6 +922,10 @@ layout: home
   filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)) brightness(1.2);
   transition: all 0.4s ease;
   animation: gradientShift 5s ease infinite;
+  position: relative;
+  z-index: 2;
+  display: block;
+  min-height: 1.2em;
 }
 
 .stat-item:hover .stat-number {

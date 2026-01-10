@@ -1,7 +1,11 @@
-import { readdir, stat, readFile } from 'fs/promises';
+import { readdir, readFile, stat } from 'fs/promises';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { writeFile } from 'fs/promises';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
+const execAsync = promisify(exec);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -34,13 +38,16 @@ const categories = [
 ];
 
 /**
- * 获取文件修改时间
+ * 获取文件Git提交时间（时间戳）
  */
-async function getFileModifyTime(filePath) {
+async function getFileCommitTime(filePath) {
   try {
-    const stats = await stat(filePath);
-    return stats.mtime.getTime();
+    // 使用git log获取文件的最后提交时间戳
+    const { stdout } = await execAsync(`git log -1 --format="%ct" -- "${filePath}"`);
+    const timestamp = parseInt(stdout.trim());
+    return isNaN(timestamp) ? 0 : timestamp * 1000; // 转换为毫秒
   } catch (error) {
+    // 如果文件不在git中或git命令失败，返回0
     return 0;
   }
 }
@@ -187,17 +194,30 @@ async function getLatestArticle(category) {
       return null;
     }
 
-    // 获取所有文件的修改时间
+    // 获取所有文件的Git提交时间和文件系统时间
     const filesWithTime = await Promise.all(
       mdFiles.map(async (file) => {
         const filePath = join(categoryPath, file);
-        const modifyTime = await getFileModifyTime(filePath);
-        return { file, modifyTime, path: filePath };
+        const commitTime = await getFileCommitTime(filePath);
+        // 当提交时间相同时，使用文件系统时间作为次要排序
+        let fileSystemTime = 0;
+        try {
+          const stats = await stat(filePath);
+          fileSystemTime = stats.mtime.getTime();
+        } catch (error) {
+          // 忽略错误
+        }
+        return { file, commitTime, fileSystemTime, path: filePath };
       })
     );
 
-    // 按修改时间排序，获取最新的
-    filesWithTime.sort((a, b) => b.modifyTime - a.modifyTime);
+    // 按Git提交时间排序，如果提交时间相同则按文件系统时间排序
+    filesWithTime.sort((a, b) => {
+      if (b.commitTime !== a.commitTime) {
+        return b.commitTime - a.commitTime;
+      }
+      return b.fileSystemTime - a.fileSystemTime;
+    });
     const latestFile = filesWithTime[0];
 
     // 读取文件内容提取标题和描述

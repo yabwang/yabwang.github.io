@@ -44,6 +44,24 @@ const interviewSidebar = {
         },
       ],
     },
+    {
+      text: '并发编程',
+      collapsed: false,
+      items: [
+        {
+          text: '线程基础',
+          link: '/interview/concurrency-thread-basics',
+        },
+        {
+          text: 'JUC包',
+          link: '/interview/concurrency-juc',
+        },
+        {
+          text: '并发设计模式',
+          link: '/interview/concurrency-design-patterns',
+        },
+      ],
+    },
   ],
 };
 

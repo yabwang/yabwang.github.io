@@ -27,45 +27,45 @@ layout: home
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
 
 <div class="recent-posts">
-  <a href="/30-day-algorithm/day01" class="post-card tech-card">
+  <a href="/30-day-algorithm/day03" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">NEW</span>
         <span class="card-icon">🚀</span>
       </div>
-      <h3>30天算法挑战 - Day 1</h3>
-      <p>数组基础与双指针技巧：两数之和、盛最多水的容器，从零开始系统学习算法</p>
+      <h3>Day 3 - 链表专题</h3>
+      <p>📅 日期：2026年1月10日 🎯 主题：链表基础 + 指针操作</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
     </div>
   </a>
   
-  <a href="/interview/java-interview-outline" class="post-card tech-card">
+  <a href="/interview/concurrency-juc" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">HOT</span>
         <span class="card-icon">☕</span>
       </div>
-      <h3>Java 面试学习大纲</h3>
-      <p>系统性整理 Java 程序员面试核心知识点，涵盖基础、并发、JVM、框架等全方位内容</p>
+      <h3>JUC包</h3>
+      <p>Lock接口 - 2. 并发集合 - 3. 线程池 - 4. 原子类 - 5. 同步工具类 - 6. CompletableFuture</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
     </div>
   </a>
   
-  <a href="/others/" class="post-card tech-card">
+  <a href="/others/cosine" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">📚</span>
         <span class="card-icon">📝</span>
       </div>
-      <h3>其他技术文章</h3>
-      <p>收录算法、数据结构、数据库、编码等各个方面的技术文章，持续更新中</p>
+      <h3>余弦相似度</h3>
+      <p>文本分类主要分为几个步骤，分别是文本预处理，特征选择，特征加权，分类模型训练，性能评价。</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>

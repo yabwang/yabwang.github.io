@@ -3,8 +3,9 @@
   "type": "module",
   "scripts": {
     "stats": "node scripts/generate-stats.js",
-    "docs:dev": "npm run stats && vitepress dev docs",
-    "docs:build": "npm run stats && vitepress build docs",
+    "update-latest": "node scripts/update-latest-articles.js",
+    "docs:dev": "npm run update-latest && npm run stats && vitepress dev docs",
+    "docs:build": "npm run update-latest && npm run stats && vitepress build docs",
     "docs:preview": "vitepress preview docs --port 8080"
   },
   "devDependencies": {

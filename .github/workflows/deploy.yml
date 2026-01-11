@@ -30,6 +30,9 @@ jobs:
       - name: Build site
         run: npm run docs:build
 
+      - name: Disable Jekyll
+        run: touch docs/.vitepress/dist/.nojekyll
+
       - name: Validate output
         run: ls -R docs/.vitepress/dist # 验证构建产物
 

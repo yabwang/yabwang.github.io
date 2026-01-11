@@ -4,9 +4,7 @@ layout: home
 ---
 
 <div class="tech-hero-wrapper">
-  <div class="grid-overlay"></div>
   <div class="scan-line"></div>
-  <div class="data-stream"></div>
   <div class="corner-decoration top-left"></div>
   <div class="corner-decoration top-right"></div>
   <div class="corner-decoration bottom-left"></div>
@@ -113,33 +111,6 @@ layout: home
   animation: borderPulse 3s ease-in-out infinite;
 }
 
-/* 数据流效果 */
-.data-stream {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent 0px,
-    transparent 2px,
-    rgba(0, 255, 255, 0.15) 2px,
-    rgba(0, 255, 255, 0.15) 4px,
-    transparent 4px,
-    transparent 6px,
-    rgba(0, 255, 136, 0.12) 6px,
-    rgba(0, 255, 136, 0.12) 8px
-  );
-  animation: dataStream 8s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes dataStream {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
 
 /* 角落装饰 */
 .corner-decoration {
@@ -315,27 +286,6 @@ layout: home
 }
 
 
-.grid-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px),
-    linear-gradient(rgba(138, 43, 226, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
-  opacity: 0.5;
-  animation: gridMove 20s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes gridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
-}
 
 .scan-line {
   position: absolute;

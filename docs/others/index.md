@@ -13,6 +13,7 @@ order: 1
 - [余弦相似度](/others/cosine)
 - [动态规划](/others/dp)
 - [LeetCode 100 题](/others/leetCode100)
+- [MCP（模型上下文协议）详解](/others/mcp)
 - [MySQL 基础](/others/mysql)
 - [快速排序 Java 实现](/others/quick-sort-java)
 - [排序算法](/others/sort)

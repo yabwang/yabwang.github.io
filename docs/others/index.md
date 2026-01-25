@@ -16,9 +16,25 @@ order: 1
 - [MCP（模型上下文协议）详解](/others/mcp)
 - [MySQL 基础](/others/mysql)
 - [快速排序 Java 实现](/others/quick-sort-java)
+- [慢SQL治理总结](/others/slow-sql-governance)
 - [排序算法](/others/sort)
 - [剑指 Offer](/others/sword-offer)
 - [并查集](/others/unionFind)
+
+---
+
+## 🔗 常用链接
+
+### 数据库优化
+- [慢SQL治理总结](https://mp.weixin.qq.com/s/LZRSQJufGRpRw6u4h_Uyww) - 慢SQL问题诊断与优化方案
+
+### 开发工具
+- [Git 官方文档](https://git-scm.com/doc)
+- [GitHub 文档](https://docs.github.com/)
+
+### 算法学习
+- [LeetCode 中文站](https://leetcode.cn/)
+- [LeetCode 国际站](https://leetcode.com/)
 
 ---
 

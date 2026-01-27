@@ -47,6 +47,7 @@ order: 1
 - **应用开发**
   - Prompt 工程
   - RAG (检索增强生成)
+  - 向量嵌入 (Vector Embedding)
   - Agent 开发
   - 多模态应用
 

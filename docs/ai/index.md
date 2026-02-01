@@ -45,9 +45,9 @@ order: 1
   - 性能监控
 
 - **应用开发**
-  - Prompt 工程
+  - [Prompt 工程](/ai/prompt-engineering)
   - RAG (检索增强生成)
-  - 向量嵌入 (Vector Embedding)
+  - [向量嵌入 (Vector Embedding)](/ai/vector-embedding)
   - Agent 开发
   - 多模态应用
 

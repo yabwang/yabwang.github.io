@@ -50,6 +50,7 @@ order: 1
   - [向量嵌入 (Vector Embedding)](/ai/vector-embedding)
   - Agent 开发
   - [活文件理论 (Living Files)](/ai/living-files-theory)
+  - [OpenClaw 记忆系统架构](/ai/openclaw-memory-architecture)
   - 多模态应用
 
 ### 前沿技术

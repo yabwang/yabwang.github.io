@@ -15,7 +15,7 @@ order: 0
 ### 核心基础
 - **Java 基础**：语言特性、集合框架、IO/NIO
 - **并发编程**：线程、JUC 包、并发设计模式
-- **JVM**：内存模型、垃圾回收、性能调优
+- **JVM**：[内存模型、GC 与类加载](/interview/jvm-basics)、性能调优
 
 ### 框架技术
 - **Spring 生态**：IOC、AOP、Spring Boot、Spring Cloud

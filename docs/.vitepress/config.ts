@@ -62,6 +62,16 @@ const interviewSidebar = {
         },
       ],
     },
+    {
+      text: 'JVM',
+      collapsed: false,
+      items: [
+        {
+          text: '内存模型、GC与类加载',
+          link: '/interview/jvm-basics',
+        },
+      ],
+    },
   ],
 };
 

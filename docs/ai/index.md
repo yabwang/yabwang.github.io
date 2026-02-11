@@ -17,7 +17,7 @@ order: 1
   - 注意力机制 (Attention Mechanism)
   - 位置编码 (Positional Encoding)
   - 编码器-解码器结构
-  - 自注意力与交叉注意力
+  - 自注意力与交叉
 
 - **预训练与微调**
   - 预训练目标函数
@@ -49,6 +49,7 @@ order: 1
   - RAG (检索增强生成)
   - [向量嵌入 (Vector Embedding)](/ai/vector-embedding)
   - Agent 开发
+  - [活文件理论 (Living Files)](/ai/living-files-theory)
   - 多模态应用
 
 ### 前沿技术

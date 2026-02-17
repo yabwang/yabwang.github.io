@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as r}from"./chunks/framework.DK1-H3E1.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"others/sort.md","filePath":"others/sort.md","lastUpdated":1767835823000}'),o={name:"others/sort.md"};function s(a,c,n,d,p,_){return r(),e("div")}const f=t(o,[["render",s]]);export{m as __pageData,f as default};

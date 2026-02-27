@@ -75,18 +75,91 @@ const interviewSidebar = {
   ],
 };
 
-const aiSidebar = generateSidebar([
-  {
-    documentRootPath: '/docs',
-    scanStartPath: 'ai',
-    resolvePath: '/ai/',
-    useTitleFromFileHeading: true,
-    useFolderTitleFromIndexFile: true,
-    sortMenusByFrontmatterOrder: true,
-    frontmatterOrderDefaultValue: 999,
-    collapsed: false,
-  },
-]);
+const aiSidebar = {
+  '/ai/': [
+    {
+      text: '大语言模型 (LLM) 探索',
+      link: '/ai/',
+    },
+    {
+      text: 'AI 最新进展',
+      link: '/ai/latest-developments',
+    },
+    {
+      text: '基础理论',
+      collapsed: false,
+      items: [
+        {
+          text: 'Transformer 架构',
+          collapsed: false,
+          items: [
+            { text: '注意力机制 (Attention Mechanism)', link: '/ai/attention-mechanism' },
+            { text: '位置编码 (Positional Encoding)', link: '/ai/positional-encoding' },
+            { text: '编码器-解码器结构', link: '/ai/encoder-decoder-architecture' },
+            { text: '自注意力与交叉', link: '/ai/self-attention-and-cross-attention' },
+          ],
+        },
+      ],
+    },
+    {
+      text: '实践应用',
+      collapsed: false,
+      items: [
+        {
+          text: '应用开发',
+          collapsed: false,
+          items: [
+            { text: 'Prompt 工程', link: '/ai/prompt-engineering' },
+            { text: '上下文工程 (Context Engineering)', link: '/ai/context-engineering' },
+            { text: 'RAG（检索增强生成）', link: '/ai/rag' },
+            { text: '向量嵌入 (Vector Embedding)', link: '/ai/vector-embedding' },
+            { text: 'Skills / Agent Skills', link: '/ai/agent-skills' },
+            { text: 'MCP（Model Context Protocol）', link: '/ai/mcp' },
+            { text: 'Agent 开发', link: '/ai/agent-development' },
+            { text: '活文件理论 (Living Files)', link: '/ai/living-files-theory' },
+            { text: 'OpenClaw 记忆系统架构', link: '/ai/openclaw-memory-architecture' },
+          ],
+        },
+      ],
+    },
+    {
+      text: '前沿技术',
+      collapsed: false,
+      items: [
+        {
+          text: '模型能力',
+          collapsed: false,
+          items: [
+            { text: '上下文理解与长文本处理', link: '/ai/context-understanding-long-context' },
+            { text: '思维链推理 (Chain-of-Thought)', link: '/ai/chain-of-thought-reasoning' },
+            { text: '工具使用 (Tool Use)', link: '/ai/tool-use' },
+            { text: '多模态能力', link: '/ai/multimodal-capability' },
+          ],
+        },
+        {
+          text: '优化技术',
+          collapsed: false,
+          items: [
+            { text: '知识蒸馏', link: '/ai/knowledge-distillation' },
+          ],
+        },
+      ],
+    },
+    {
+      text: '工具与框架',
+      collapsed: false,
+      items: [
+        {
+          text: '部署工具',
+          collapsed: false,
+          items: [
+            { text: 'Ollama', link: '/ai/ollama' },
+          ],
+        },
+      ],
+    },
+  ],
+};
 
 const othersSidebar = generateSidebar([
   {

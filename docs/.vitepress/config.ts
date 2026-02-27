@@ -230,10 +230,10 @@ export default defineConfig({
     siteTitle: 'Yabin\'s Tech Journey',
     
     nav: [
-      { text: '🚀 30天刷题计划', link: '/30-day-algorithm/' },
-      { text: '☕ Java 面试', link: '/interview/' },
-      { text: '🤖 AI 探索', link: '/ai/' },
-      { text: '📝 其他文章', link: '/others/' },
+      { text: '🚀 30天算法学习', link: '/30-day-algorithm/' },
+      { text: '☕ Java 基础学习', link: '/interview/' },
+      { text: '🤖 AI 学习', link: '/ai/' },
+      { text: '📝 随笔与杂记', link: '/others/' },
     ],
 
     // 使用自动生成的侧边栏

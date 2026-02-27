@@ -14,10 +14,10 @@ order: 1
 
 ### 基础理论
 - **Transformer 架构**
-  - 注意力机制 (Attention Mechanism)
-  - 位置编码 (Positional Encoding)
-  - 编码器-解码器结构
-  - 自注意力与交叉
+  - [注意力机制 (Attention Mechanism)](/ai/attention-mechanism)
+  - [位置编码 (Positional Encoding)](/ai/positional-encoding)
+  - [编码器-解码器结构](/ai/encoder-decoder-architecture)
+  - [自注意力与交叉](/ai/self-attention-and-cross-attention)
 
 - **预训练与微调**
   - 预训练目标函数
@@ -46,23 +46,26 @@ order: 1
 
 - **应用开发**
   - [Prompt 工程](/ai/prompt-engineering)
-  - RAG (检索增强生成)
+  - **上下文工程 (Context Engineering)**：[上下文设计、窗口管理与少样本](/ai/context-engineering)
+  - **RAG（检索增强生成）**：[检索、重排序、上下文注入与生成](/ai/rag)
   - [向量嵌入 (Vector Embedding)](/ai/vector-embedding)
-  - Agent 开发
+  - **Skills / Agent Skills**：[可复用技能、技能编排与扩展](/ai/agent-skills)
+  - **MCP（Model Context Protocol）**：[工具与资源的标准化协议、MCP 服务与客户端](/ai/mcp)
+  - [Agent 开发](/ai/agent-development)
   - [活文件理论 (Living Files)](/ai/living-files-theory)
   - [OpenClaw 记忆系统架构](/ai/openclaw-memory-architecture)
   - 多模态应用
 
 ### 前沿技术
 - **模型能力**
-  - 上下文理解与长文本处理
-  - 思维链推理 (Chain-of-Thought)
-  - 工具使用 (Tool Use)
-  - 多模态能力
+  - [上下文理解与长文本处理](/ai/context-understanding-long-context)
+  - [思维链推理 (Chain-of-Thought)](/ai/chain-of-thought-reasoning)
+  - [工具使用 (Tool Use)](/ai/tool-use)
+  - [多模态能力](/ai/multimodal-capability)
 
 - **优化技术**
   - 模型压缩与加速
-  - 知识蒸馏
+  - [知识蒸馏](/ai/knowledge-distillation)
   - 模型剪枝
   - 量化技术
 
@@ -86,7 +89,7 @@ order: 1
   - Colossal-AI
 
 - **部署工具**
-  - Ollama
+  - [Ollama](/ai/ollama)
   - Text Generation Inference (TGI)
   - TensorRT
   - ONNX Runtime

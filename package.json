@@ -6,7 +6,8 @@
     "update-latest": "node scripts/update-latest-articles.js",
     "docs:dev": "npm run update-latest && npm run stats && vitepress dev docs",
     "docs:build": "npm run update-latest && npm run stats && vitepress build docs",
-    "docs:preview": "vitepress preview docs --port 8080"
+    "docs:preview": "vitepress preview docs --port 8080",
+    "push": "node scripts/push.js"
   },
   "devDependencies": {
     "vitepress": "^1.6.3",

@@ -150,6 +150,13 @@ const aiSidebar = {
       collapsed: false,
       items: [
         {
+          text: '开发工具',
+          collapsed: false,
+          items: [
+            { text: 'Claude Code 使用技巧', link: '/ai/claude-code-tips' },
+          ],
+        },
+        {
           text: '部署工具',
           collapsed: false,
           items: [

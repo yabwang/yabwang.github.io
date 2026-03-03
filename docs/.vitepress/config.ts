@@ -154,6 +154,7 @@ const aiSidebar = {
           collapsed: false,
           items: [
             { text: 'Claude Code 使用技巧', link: '/ai/claude-code-tips' },
+            { text: 'Ghostty 终端使用技巧', link: '/ai/ghostty-tips' },
           ],
         },
         {

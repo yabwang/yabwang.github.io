@@ -88,6 +88,10 @@ order: 1
   - Megatron-LM
   - Colossal-AI
 
+- **开发工具**
+  - [Claude Code 使用技巧](/ai/claude-code-tips)
+  - [Ghostty 终端使用技巧](/ai/ghostty-tips)
+
 - **部署工具**
   - [Ollama](/ai/ollama)
   - Text Generation Inference (TGI)

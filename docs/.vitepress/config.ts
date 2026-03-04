@@ -225,6 +225,8 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: '技术探索者的博客 - 分享算法、系统设计与工程实践' }],
     // 密码保护脚本（在深色模式脚本之前加载）
     ['script', { src: '/password-protect.js' }],
+    // 沉浸式阅读模式
+    ['script', { src: '/reading-mode.js', defer: '' }],
     // 强制深色模式脚本
     ['script', {}, `
       (function() {

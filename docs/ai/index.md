@@ -52,8 +52,8 @@ order: 1
   - **Skills / Agent Skills**：[可复用技能、技能编排与扩展](/ai/agent-skills)
   - **MCP（Model Context Protocol）**：[工具与资源的标准化协议、MCP 服务与客户端](/ai/mcp)
   - [Agent 开发](/ai/agent-development)
-  - [活文件理论 (Living Files)](/ai/living-files-theory)
-  - [OpenClaw 记忆系统架构](/ai/openclaw-memory-architecture)
+  - [活文件理论 (Living Files)](/ai/philosophy/living-files-theory)
+  - [OpenClaw 记忆系统架构](/ai/philosophy/openclaw-memory-architecture)
   - 多模态应用
 
 ### 前沿技术

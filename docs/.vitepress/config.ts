@@ -116,8 +116,14 @@ const aiSidebar = {
             { text: 'Skills / Agent Skills', link: '/ai/agent-skills' },
             { text: 'MCP（Model Context Protocol）', link: '/ai/mcp' },
             { text: 'Agent 开发', link: '/ai/agent-development' },
-            { text: '活文件理论 (Living Files)', link: '/ai/living-files-theory' },
-            { text: 'OpenClaw 记忆系统架构', link: '/ai/openclaw-memory-architecture' },
+          ],
+        },
+        {
+          text: 'AI 哲学与思考',
+          collapsed: false,
+          items: [
+            { text: '活文件理论 (Living Files)', link: '/ai/philosophy/living-files-theory' },
+            { text: 'OpenClaw 记忆系统架构', link: '/ai/philosophy/openclaw-memory-architecture' },
           ],
         },
       ],

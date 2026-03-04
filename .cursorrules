@@ -151,7 +151,7 @@ feat: 添加Day {天数}算法刷题 - {主题}
 
 ### 文件组织
 - 算法刷题文件：`docs/30-day-algorithm/`
-- 面试相关文件：`docs/interview/`
+- Java学习文件：`docs/java-learning/`
 - AI 相关文件：`docs/ai/`
 - 其他文章：`docs/others/`
 

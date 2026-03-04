@@ -33,7 +33,7 @@ npm run update-latest
 
 **Content Structure:**
 - `docs/30-day-algorithm/` - Algorithm challenge articles (day01.md - day30.md format)
-- `docs/interview/` - Java interview preparation materials
+- `docs/java-learning/` - Java interview preparation materials
 - `docs/ai/` - AI/LLM technical articles
 - `docs/others/` - Miscellaneous technical articles
 - `docs/.vitepress/config.ts` - VitePress configuration with sidebar generation

@@ -23,7 +23,7 @@ const categories = [
   },
   {
     name: 'Java面试',
-    path: 'interview',
+    path: 'java-learning',
     badge: 'HOT',
     icon: '☕',
     exclude: ['index.md', 'java-interview-outline.md']

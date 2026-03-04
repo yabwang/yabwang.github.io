@@ -15,16 +15,16 @@ const algorithmSidebar = generateSidebar([
   },
 ]);
 
-// 手动配置 interview 侧边栏，实现分组结构
-const interviewSidebar = {
-  '/interview/': [
+// Java 学习侧边栏配置
+const javaLearningSidebar = {
+  '/java-learning/': [
     {
-      text: 'Java程序员面试学习大纲',
-      link: '/interview/java-interview-outline',
+      text: 'Java程序员学习大纲',
+      link: '/java-learning/java-interview-outline',
     },
     {
-      text: '☕ Java 面试学习',
-      link: '/interview/',
+      text: '☕ Java 学习笔记',
+      link: '/java-learning/',
     },
     {
       text: 'Java基础',
@@ -32,15 +32,15 @@ const interviewSidebar = {
       items: [
         {
           text: '语言特性',
-          link: '/interview/java-basics-language-features',
+          link: '/java-learning/java-basics-language-features',
         },
         {
           text: '集合框架',
-          link: '/interview/java-basics-collections',
+          link: '/java-learning/java-basics-collections',
         },
         {
           text: 'IO/NIO',
-          link: '/interview/java-basics-io-nio',
+          link: '/java-learning/java-basics-io-nio',
         },
       ],
     },
@@ -50,15 +50,15 @@ const interviewSidebar = {
       items: [
         {
           text: '线程基础',
-          link: '/interview/concurrency-thread-basics',
+          link: '/java-learning/concurrency-thread-basics',
         },
         {
           text: 'JUC包',
-          link: '/interview/concurrency-juc',
+          link: '/java-learning/concurrency-juc',
         },
         {
           text: '并发设计模式',
-          link: '/interview/concurrency-design-patterns',
+          link: '/java-learning/concurrency-design-patterns',
         },
       ],
     },
@@ -68,7 +68,7 @@ const interviewSidebar = {
       items: [
         {
           text: '内存模型、GC与类加载',
-          link: '/interview/jvm-basics',
+          link: '/java-learning/jvm-basics',
         },
       ],
     },
@@ -185,7 +185,7 @@ const othersSidebar = generateSidebar([
 // 合并侧边栏配置，VitePress 会根据当前路径自动匹配
 const sidebar = {
   ...algorithmSidebar,
-  ...interviewSidebar,
+  ...javaLearningSidebar,
   ...aiSidebar,
   ...othersSidebar,
 };
@@ -206,7 +206,7 @@ function ensurePathMatch(sidebarConfig, targetSidebar) {
   }
 }
 
-ensurePathMatch(sidebar, interviewSidebar);
+ensurePathMatch(sidebar, javaLearningSidebar);
 ensurePathMatch(sidebar, aiSidebar);
 ensurePathMatch(sidebar, othersSidebar);
 
@@ -241,7 +241,7 @@ export default defineConfig({
     
     nav: [
       { text: '🚀 30天算法学习', link: '/30-day-algorithm/' },
-      { text: '☕ Java 基础学习', link: '/interview/' },
+      { text: '☕ Java 学习笔记', link: '/java-learning/' },
       { text: '🤖 AI 学习', link: '/ai/' },
       { text: '📝 随笔与杂记', link: '/others/' },
     ],

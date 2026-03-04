@@ -25,45 +25,45 @@ layout: home
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
 
 <div class="recent-posts">
-  <a href="/30-day-algorithm/day03" class="post-card tech-card">
+  <a href="/30-day-algorithm/day19" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">NEW</span>
         <span class="card-icon">🚀</span>
       </div>
-      <h3>Day 3 - 链表专题</h3>
-      <p>📅 日期：2026年1月10日 🎯 主题：链表基础 + 指针操作</p>
+      <h3>Day 19 - 回溯</h3>
+      <p>📅 日期：2026年1月26日 🎯 主题：回溯基础 - 组合与全排列</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
     </div>
   </a>
   
-  <a href="/interview/concurrency-juc" class="post-card tech-card">
+  <a href="/java-learning/jvm-basics" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">HOT</span>
         <span class="card-icon">☕</span>
       </div>
-      <h3>JUC包</h3>
-      <p>Lock接口 - 2. 并发集合 - 3. 线程池 - 4. 原子类 - 5. 同步工具类 - 6. CompletableFuture</p>
+      <h3>JVM 知识总结</h3>
+      <p>内存模型 - 2. 垃圾回收 - 3. 类加载机制 - 4. 性能调优与监控</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
     </div>
   </a>
   
-  <a href="/others/cosine" class="post-card tech-card">
+  <a href="/others/slow-sql-governance" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">📚</span>
         <span class="card-icon">📝</span>
       </div>
-      <h3>余弦相似度</h3>
-      <p>文本分类主要分为几个步骤，分别是文本预处理，特征选择，特征加权，分类模型训练，性能评价。</p>
+      <h3>慢SQL治理总结</h3>
+      <p>慢SQL是数据库性能优化的核心问题之一。本文档总结了慢SQL的识别、诊断、优化和治理的完整流程。</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>

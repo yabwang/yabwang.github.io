@@ -91,7 +91,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     /* 数据流线条 - 暗色系科技感 */
     repeating-linear-gradient(
       45deg,
@@ -113,7 +113,7 @@ body::before {
     radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
     radial-gradient(ellipse at 0% 0%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
     radial-gradient(ellipse at 100% 100%, rgba(138, 43, 226, 0.18) 0%, transparent 30%);
-  background-size: 
+  background-size:
     200px 200px,
     200px 200px,
     800px 800px,
@@ -125,6 +125,10 @@ body::before {
   z-index: 0;
   animation: backgroundPulse 20s ease-in-out infinite, backgroundMove 30s linear infinite;
   opacity: 1;
+  /* 性能优化 */
+  will-change: opacity;
+  transform: translateZ(0);
+  contain: strict;
 }
 
 body::after {
@@ -134,7 +138,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     /* 六边形图案 - 暗色系 */
     repeating-linear-gradient(
       60deg,
@@ -154,7 +158,11 @@ body::after {
   pointer-events: none;
   z-index: 0;
   opacity: 0.7;
-  animation: patternRotate 40s linear infinite;
+  animation: patternRotate 120s linear infinite;
+  /* 性能优化 */
+  will-change: transform;
+  transform: translateZ(0);
+  contain: strict;
 }
 
 @keyframes backgroundMove {
@@ -188,11 +196,9 @@ body::after {
 @keyframes backgroundPulse {
   0%, 100% {
     opacity: 0.6;
-    transform: scale(1);
   }
   50% {
     opacity: 1;
-    transform: scale(1.1);
   }
 }
 

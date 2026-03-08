@@ -25,15 +25,15 @@ layout: home
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
 
 <div class="recent-posts">
-  <a href="/30-day-algorithm/day19" class="post-card tech-card">
+  <a href="/30-day-algorithm/day20" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">NEW</span>
         <span class="card-icon">🚀</span>
       </div>
-      <h3>Day 19 - 回溯</h3>
-      <p>📅 日期：2026年1月26日 🎯 主题：回溯基础 - 组合与全排列</p>
+      <h3>Day 20 - 回溯</h3>
+      <p>📅 日期：2026年1月27日 🎯 主题：回溯进阶 - 子集与组合总和</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>

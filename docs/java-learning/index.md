@@ -18,8 +18,9 @@ order: 0
 - **JVM**：[内存模型、GC 与类加载](/java-learning/jvm-basics)、性能调优
 
 ### 框架技术
-- **Spring 生态**：IOC、AOP、Spring Boot、Spring Cloud
-- **MyBatis**：工作原理、缓存机制、插件机制
+- **Spring 核心**：[IOC、AOP、Bean 生命周期、事务管理](/java-learning/spring-framework)
+- **Spring 生态**：Spring Boot、Spring Cloud
+- **MyBatis**：[工作原理、动态 SQL、缓存机制、插件原理](/java-learning/mybatis)
 - **其他框架**：Redis、消息队列、定时任务
 
 ### 数据库

@@ -80,6 +80,10 @@ const javaLearningSidebar = {
           text: 'MyBatis',
           link: '/java-learning/mybatis',
         },
+        {
+          text: '其他框架',
+          link: '/java-learning/other-frameworks',
+        },
       ],
     },
   ],
@@ -185,18 +189,51 @@ const aiSidebar = {
   ],
 };
 
-const othersSidebar = generateSidebar([
-  {
-    documentRootPath: '/docs',
-    scanStartPath: 'others',
-    resolvePath: '/others/',
-    useTitleFromFileHeading: true,
-    useFolderTitleFromIndexFile: true,
-    sortMenusByFrontmatterOrder: true,
-    frontmatterOrderDefaultValue: 999,
-    collapsed: false,
-  },
-]);
+// 随笔杂记侧边栏配置 - 按分类组织
+const othersSidebar = {
+  '/others/': [
+    {
+      text: '📚 随笔杂记首页',
+      link: '/others/',
+    },
+    {
+      text: '🧮 算法专题',
+      collapsed: false,
+      items: [
+        { text: '排序算法汇总', link: '/others/algorithm/sort' },
+        { text: '快速排序 Java 实现', link: '/others/algorithm/quick-sort-java' },
+        { text: '二进制加法', link: '/others/algorithm/binary_addition' },
+        { text: '动态规划', link: '/others/algorithm/dp' },
+        { text: '并查集', link: '/others/algorithm/unionFind' },
+        { text: 'LeetCode 100 题', link: '/others/algorithm/leetCode100' },
+        { text: '剑指 Offer', link: '/others/algorithm/sword-offer' },
+      ],
+    },
+    {
+      text: '🗄️ 数据库专题',
+      collapsed: false,
+      items: [
+        { text: 'MySQL 基础', link: '/others/database/mysql' },
+        { text: '慢 SQL 治理总结', link: '/others/database/slow-sql-governance' },
+      ],
+    },
+    {
+      text: '🤖 AI 与大模型',
+      collapsed: false,
+      items: [
+        { text: '余弦相似度', link: '/others/ai-llm/cosine' },
+        { text: 'MCP 协议详解', link: '/others/ai-llm/mcp' },
+      ],
+    },
+    {
+      text: '📦 编码与数据格式',
+      collapsed: false,
+      items: [
+        { text: 'Base64 编码详解', link: '/others/encoding/base64-explanation' },
+      ],
+    },
+  ],
+};
 
 // 合并侧边栏配置，VitePress 会根据当前路径自动匹配
 const sidebar = {
@@ -224,7 +261,6 @@ function ensurePathMatch(sidebarConfig, targetSidebar) {
 
 ensurePathMatch(sidebar, javaLearningSidebar);
 ensurePathMatch(sidebar, aiSidebar);
-ensurePathMatch(sidebar, othersSidebar);
 
 export default defineConfig({
   lang: 'zh-CN',

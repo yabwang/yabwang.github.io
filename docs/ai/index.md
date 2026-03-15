@@ -49,6 +49,7 @@ order: 1
   - **上下文工程 (Context Engineering)**：[上下文设计、窗口管理与少样本](/ai/context-engineering)
   - **RAG（检索增强生成）**：[检索、重排序、上下文注入与生成](/ai/rag)
   - [向量嵌入 (Vector Embedding)](/ai/vector-embedding)
+  - **文本相似度计算**：[Jaccard、余弦相似度与层次聚类](/ai/similarity-metrics)
   - **Skills / Agent Skills**：[可复用技能、技能编排与扩展](/ai/agent-skills)
   - **MCP（Model Context Protocol）**：[工具与资源的标准化协议、MCP 服务与客户端](/ai/mcp)
   - [Agent 开发](/ai/agent-development)

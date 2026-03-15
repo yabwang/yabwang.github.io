@@ -19,11 +19,7 @@ const algorithmSidebar = generateSidebar([
 const javaLearningSidebar = {
   '/java-learning/': [
     {
-      text: 'Java程序员学习大纲',
-      link: '/java-learning/java-interview-outline',
-    },
-    {
-      text: '☕ Java 学习笔记',
+      text: '☕ Java 学习大纲',
       link: '/java-learning/',
     },
     {

@@ -86,6 +86,20 @@ const javaLearningSidebar = {
         },
       ],
     },
+    {
+      text: '数据库',
+      collapsed: false,
+      items: [
+        {
+          text: 'MySQL 核心原理',
+          link: '/java-learning/database-mysql',
+        },
+        {
+          text: 'Redis 核心原理',
+          link: '/java-learning/database-redis',
+        },
+      ],
+    },
   ],
 };
 
@@ -127,6 +141,7 @@ const aiSidebar = {
             { text: '上下文工程 (Context Engineering)', link: '/ai/context-engineering' },
             { text: 'RAG（检索增强生成）', link: '/ai/rag' },
             { text: '向量嵌入 (Vector Embedding)', link: '/ai/vector-embedding' },
+            { text: '文本相似度计算', link: '/ai/similarity-metrics' },
             { text: 'Skills / Agent Skills', link: '/ai/agent-skills' },
             { text: 'MCP（Model Context Protocol）', link: '/ai/mcp' },
             { text: 'Agent 开发', link: '/ai/agent-development' },
@@ -214,14 +229,6 @@ const othersSidebar = {
       items: [
         { text: 'MySQL 基础', link: '/others/database/mysql' },
         { text: '慢 SQL 治理总结', link: '/others/database/slow-sql-governance' },
-      ],
-    },
-    {
-      text: '🤖 AI 与大模型',
-      collapsed: false,
-      items: [
-        { text: '余弦相似度', link: '/others/ai-llm/cosine' },
-        { text: 'MCP 协议详解', link: '/others/ai-llm/mcp' },
       ],
     },
     {

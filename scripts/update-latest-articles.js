@@ -34,6 +34,13 @@ const categories = [
     badge: '📚',
     icon: '📝',
     exclude: ['index.md']
+  },
+  {
+    name: 'AI与大模型',
+    path: 'ai',
+    badge: 'AI',
+    icon: '🤖',
+    exclude: ['index.md']
   }
 ];
 

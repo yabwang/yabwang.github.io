@@ -25,30 +25,30 @@ layout: home
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
 
 <div class="recent-posts">
-  <a href="/30-day-algorithm/day20" class="post-card tech-card">
+  <a href="/30-day-algorithm/day27" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">NEW</span>
         <span class="card-icon">🚀</span>
       </div>
-      <h3>Day 20 - 回溯</h3>
-      <p>📅 日期：2026年1月27日 🎯 主题：回溯进阶 - 子集与组合总和</p>
+      <h3>Day 27 - 图论进阶</h3>
+      <p>📅 日期：2026 年 3 月 13 日 🎯 主题：图论进阶 - 拓扑排序与最短路径算法</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
     </div>
   </a>
   
-  <a href="/java-learning/jvm-basics" class="post-card tech-card">
+  <a href="/java-learning/mybatis" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">HOT</span>
         <span class="card-icon">☕</span>
       </div>
-      <h3>JVM 知识总结</h3>
-      <p>内存模型 - 2. 垃圾回收 - 3. 类加载机制 - 4. 性能调优与监控</p>
+      <h3>MyBatis 框架核心原理</h3>
+      <p>深入理解 MyBatis 工作原理、动态 SQL、缓存机制与插件原理</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>

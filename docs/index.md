@@ -25,15 +25,15 @@ layout: home
 ## <span class="section-title"><span class="tech-icon">⚡</span> 最新文章</span>
 
 <div class="recent-posts">
-  <a href="/30-day-algorithm/day27" class="post-card tech-card">
+  <a href="/30-day-algorithm/day30" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">NEW</span>
         <span class="card-icon">🚀</span>
       </div>
-      <h3>Day 27 - 图论进阶</h3>
-      <p>📅 日期：2026 年 3 月 13 日 🎯 主题：图论进阶 - 拓扑排序与最短路径算法</p>
+      <h3>Day 30 - 算法总结与面试准备</h3>
+      <p>📅 日期：2026年3月16日 🎯 主题：30天算法之旅总结与面试准备</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>

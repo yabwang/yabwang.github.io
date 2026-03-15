@@ -205,7 +205,6 @@ const othersSidebar = {
         { text: '二进制加法', link: '/others/algorithm/binary_addition' },
         { text: '动态规划', link: '/others/algorithm/dp' },
         { text: '并查集', link: '/others/algorithm/unionFind' },
-        { text: 'LeetCode 100 题', link: '/others/algorithm/leetCode100' },
         { text: '剑指 Offer', link: '/others/algorithm/sword-offer' },
       ],
     },

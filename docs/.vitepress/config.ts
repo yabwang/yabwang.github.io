@@ -72,6 +72,20 @@ const javaLearningSidebar = {
         },
       ],
     },
+    {
+      text: '框架技术',
+      collapsed: false,
+      items: [
+        {
+          text: 'Spring 框架',
+          link: '/java-learning/spring-framework',
+        },
+        {
+          text: 'MyBatis',
+          link: '/java-learning/mybatis',
+        },
+      ],
+    },
   ],
 };
 

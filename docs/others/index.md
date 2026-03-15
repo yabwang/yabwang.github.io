@@ -4,29 +4,52 @@ order: 1
 
 # 其他技术文章
 
-这里收录了各种技术主题的文章，涵盖算法、数据结构、数据库、编码等各个方面的内容。
+这里收录了各种技术主题的文章，涵盖算法、数据库、AI 与编码等各个方面的内容。
 
-## 📚 文章列表
+## 📚 文章分类
 
-- [Base64 编码详解](/others/base64-explanation)
-- [二进制加法](/others/binary_addition)
-- [余弦相似度](/others/cosine)
-- [动态规划](/others/dp)
-- [LeetCode 100 题](/others/leetCode100)
-- [MCP（模型上下文协议）详解](/others/mcp)
-- [MySQL 基础](/others/mysql)
-- [快速排序 Java 实现](/others/quick-sort-java)
-- [慢SQL治理总结](/others/slow-sql-governance)
-- [排序算法](/others/sort)
-- [剑指 Offer](/others/sword-offer)
-- [并查集](/others/unionFind)
+### 🧮 算法专题
+算法与数据结构相关知识，包括经典算法、LeetCode 题解等。
+
+| 文章 | 简介 |
+|------|------|
+| [排序算法](/others/algorithm/sort) | 各种排序算法总结 |
+| [快速排序 Java 实现](/others/algorithm/quick-sort-java) | 快速排序算法详解与 Java 代码实现 |
+| [二进制加法](/others/algorithm/binary_addition) | 二进制加法算法实现 |
+| [动态规划](/others/algorithm/dp) | LeetCode Hot 100 动态规划精选 |
+| [并查集](/others/algorithm/unionFind) | 并查集核心概念与应用 |
+| [LeetCode 100 题](/others/algorithm/leetCode100) | LeetCode 经典 100 题解析 |
+| [剑指 Offer](/others/algorithm/sword-offer) | 剑指 Offer 算法学习笔记 |
+
+### 🗄️ 数据库专题
+数据库原理、优化与实战经验。
+
+| 文章 | 简介 |
+|------|------|
+| [MySQL 基础](/others/database/mysql) | InnoDB 事务实现原理 |
+| [慢 SQL 治理总结](/others/database/slow-sql-governance) | 慢 SQL 识别、诊断、优化与治理完整流程 |
+
+### 🤖 AI 与大模型
+AI、LLM 相关技术与应用。
+
+| 文章 | 简介 |
+|------|------|
+| [余弦相似度](/others/ai-llm/cosine) | 文本相似度计算与地址匹配应用 |
+| [MCP 协议详解](/others/ai-llm/mcp) | 模型上下文协议原理与应用 |
+
+### 📦 编码与数据格式
+数据编码、格式转换等技术。
+
+| 文章 | 简介 |
+|------|------|
+| [Base64 编码详解](/others/encoding/base64-explanation) | Base64 编码原理、实现与应用 |
 
 ---
 
 ## 🔗 常用链接
 
 ### 数据库优化
-- [慢SQL治理总结](https://mp.weixin.qq.com/s/LZRSQJufGRpRw6u4h_Uyww) - 慢SQL问题诊断与优化方案
+- [慢 SQL 治理总结](https://mp.weixin.qq.com/s/LZRSQJufGRpRw6u4h_Uyww) - 慢 SQL 问题诊断与优化方案
 
 ### 开发工具
 - [Git 官方文档](https://git-scm.com/doc)

@@ -100,6 +100,24 @@ const javaLearningSidebar = {
         },
       ],
     },
+    {
+      text: '分布式系统',
+      collapsed: false,
+      items: [
+        {
+          text: '理论基础（CAP/BASE）',
+          link: '/java-learning/distributed-system-theory',
+        },
+        {
+          text: '分布式组件',
+          link: '/java-learning/distributed-components',
+        },
+        {
+          text: '分布式锁',
+          link: '/java-learning/distributed-lock',
+        },
+      ],
+    },
   ],
 };
 

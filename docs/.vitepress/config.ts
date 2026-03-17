@@ -256,6 +256,13 @@ const othersSidebar = {
         { text: 'Base64 编码详解', link: '/others/encoding/base64-explanation' },
       ],
     },
+    {
+      text: '💼 面试专题',
+      collapsed: false,
+      items: [
+        { text: '阿里飞猪面试模拟题', link: '/others/interview/ali-feiji-interview-questions' },
+      ],
+    },
   ],
 };
 

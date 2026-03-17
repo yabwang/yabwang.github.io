@@ -35,6 +35,13 @@ order: 1
 |------|------|
 | [Base64 编码详解](/others/encoding/base64-explanation) | Base64 编码原理、实现与应用 |
 
+### 💼 面试专题
+大厂面试模拟题与面经总结。
+
+| 文章 | 简介 |
+|------|------|
+| [阿里飞猪面试模拟题](/others/interview/ali-feiji-interview-questions) | Java 后端开发面试模拟题，含题目、答案与解析 |
+
 ---
 
 ## 🔗 常用链接

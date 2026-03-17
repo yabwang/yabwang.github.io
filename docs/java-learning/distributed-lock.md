@@ -472,4 +472,3 @@ public class OptimisticLock {
 ---
 
 **上一章**：[分布式组件 ←](/java-learning/distributed-components)
-**下一章**：[秒杀系统设计 →](/java-learning/design-seckill)

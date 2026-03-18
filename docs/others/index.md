@@ -42,6 +42,7 @@ order: 1
 |------|------|
 | [阿里飞猪面试模拟题](/others/interview/ali-feiji-interview-questions) | Java 后端开发面试模拟题，含题目、答案与解析 |
 | [Java 后端面试实战题](/others/interview/java-backend-interview-practice) | 侧重实战场景和深度原理的面试模拟题 |
+| [Java 高频面试题 100 题](/others/interview/java-interview-100-questions) | 精选 100 道高频面试题，快速复习查漏补缺 |
 
 ---
 

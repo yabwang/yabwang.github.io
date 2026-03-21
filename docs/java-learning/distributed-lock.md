@@ -472,3 +472,4 @@ public class OptimisticLock {
 ---
 
 **上一章**：[分布式组件 ←](/java-learning/distributed-components)
+**下一章**：[消息队列 →](/java-learning/message-queue)

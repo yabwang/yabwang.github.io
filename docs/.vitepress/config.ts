@@ -116,6 +116,44 @@ const javaLearningSidebar = {
           text: '分布式锁',
           link: '/java-learning/distributed-lock',
         },
+        {
+          text: '消息队列',
+          link: '/java-learning/message-queue',
+        },
+      ],
+    },
+    {
+      text: '系统设计',
+      collapsed: false,
+      items: [
+        {
+          text: '设计原则与模式',
+          link: '/java-learning/system-design-principles',
+        },
+        {
+          text: '常见场景设计',
+          link: '/java-learning/system-design-scenarios',
+        },
+      ],
+    },
+    {
+      text: '项目经验',
+      collapsed: false,
+      items: [
+        {
+          text: '项目经验总结',
+          link: '/java-learning/project-experience',
+        },
+      ],
+    },
+    {
+      text: '面试准备',
+      collapsed: false,
+      items: [
+        {
+          text: '面试准备指南',
+          link: '/java-learning/interview-preparation',
+        },
       ],
     },
   ],

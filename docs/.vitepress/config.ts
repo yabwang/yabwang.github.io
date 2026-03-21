@@ -260,7 +260,7 @@ const othersSidebar = {
       text: '💼 面试专题',
       collapsed: false,
       items: [
-        { text: '阿里飞猪面试模拟题', link: '/others/interview/ali-feiji-interview-questions' },
+        { text: 'Java 后端面试模拟题', link: '/others/interview/java-interview-simulation' },
         { text: 'Java 后端面试实战题', link: '/others/interview/java-backend-interview-practice' },
         { text: 'Java 高频面试题 100 题', link: '/others/interview/java-interview-100-questions' },
       ],

@@ -69,21 +69,6 @@ layout: home
       </div>
     </div>
   </a>
-
-  <a href="/others/slow-sql-governance" class="post-card tech-card">
-    <div class="card-glow"></div>
-    <div class="card-content">
-      <div class="card-header">
-        <span class="card-badge">📚</span>
-        <span class="card-icon">📝</span>
-      </div>
-      <h3>慢SQL治理总结</h3>
-      <p>慢SQL是数据库性能优化的核心问题之一。本文档总结了慢SQL的识别、诊断、优化和治理的完整流程。</p>
-      <div class="card-footer">
-        <span class="read-more">查看详情</span>
-      </div>
-    </div>
-  </a>
 </div>
 
 <div class="tech-stats">
@@ -253,30 +238,24 @@ layout: home
   }
 }
 
-/* 科技图案背景 */
+/* 科技图案背景 - 优化：移除动画，改为静态 */
 .tech-pattern {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(circle at 25% 25%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.08) 0%, transparent 60%);
   background-size: 200% 200%;
-  animation: patternMove 15s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
   opacity: 0.6;
 }
 
-@keyframes patternMove {
-  0%, 100% { background-position: 0% 0%; }
-  25% { background-position: 100% 0%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 0% 100%; }
-}
+/* 优化：移除 patternMove 动画 */
 
 
 @keyframes borderPulse {
@@ -308,25 +287,21 @@ layout: home
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
+  background: linear-gradient(90deg,
+    transparent 0%,
     rgba(0, 255, 255, 0.9) 30%,
     rgba(0, 255, 136, 0.9) 50%,
     rgba(138, 43, 226, 0.9) 70%,
     transparent 100%);
-  box-shadow: 
+  box-shadow:
     0 0 15px rgba(0, 255, 255, 0.8),
     0 0 30px rgba(0, 255, 136, 0.6),
     0 0 45px rgba(138, 43, 226, 0.4);
-  animation: scanMove 3s linear infinite;
   pointer-events: none;
   z-index: 2;
 }
 
-@keyframes scanMove {
-  0% { top: 0; opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
+/* 优化：移除 scanMove 动画 */
 
 .hero-glow {
   position: absolute;
@@ -381,12 +356,13 @@ layout: home
   font-size: 1.2rem;
   margin: 0.75rem 0;
   line-height: 1.8;
-  text-shadow: 
+  text-shadow:
     0 0 10px rgba(0, 255, 255, 0.8),
     0 0 20px rgba(0, 255, 255, 0.6),
     0 0 30px rgba(0, 255, 136, 0.4);
-  animation: codeGlow 2s ease-in-out infinite;
 }
+
+/* 优化：移除 codeGlow 动画 */
 
 .code-keyword {
   color: #00d4ff;
@@ -416,19 +392,12 @@ layout: home
   text-shadow: 0 0 10px rgba(0, 255, 136, 1);
 }
 
-@keyframes codeGlow {
-  0%, 100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.2);
-  }
-}
-
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
 }
+
+/* 优化：移除 titleShine、gradientShift、lineGradient、linePulse、pulse 动画定义，保留核心 blink */
 
 .section-title {
   display: flex;
@@ -445,19 +414,12 @@ layout: home
   background-clip: text;
   position: relative;
   padding-left: 1rem;
-  text-shadow: 
+  text-shadow:
     0 0 20px rgba(0, 212, 255, 0.8),
     0 0 40px rgba(0, 255, 136, 0.6),
     0 0 60px rgba(168, 85, 247, 0.4);
-  animation: titleShine 3s ease-in-out infinite, gradientShift 5s ease infinite;
   filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.6));
 }
-
-@keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
 
 .section-title::before {
   content: '';
@@ -469,50 +431,20 @@ layout: home
   height: 70%;
   /* 暗色系科技感 */
   background: linear-gradient(180deg, #00d4ff, #00ff88, #a855f7, #00d4ff);
-  background-size: 100% 200%;
   border-radius: 3px;
-  box-shadow: 
+  box-shadow:
     0 0 10px rgba(0, 212, 255, 1),
     0 0 20px rgba(0, 255, 136, 0.8),
     0 0 30px rgba(168, 85, 247, 0.6);
-  animation: linePulse 2s ease-in-out infinite, lineGradient 3s ease infinite;
 }
 
-@keyframes lineGradient {
-  0%, 100% { background-position: 0% 0%; }
-  50% { background-position: 0% 100%; }
-}
-
-
-@keyframes titleShine {
-  0%, 100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.3);
-  }
-}
-
-@keyframes linePulse {
-  0%, 100% {
-    opacity: 0.8;
-    transform: translateY(-50%) scaleY(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-50%) scaleY(1.2);
-  }
-}
+/* 优化：移除 lineGradient、titleShine、linePulse 动画定义 */
 
 .tech-icon {
   font-size: 1.5rem;
-  animation: pulse 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
+/* 优化：移除 pulse 动画 */
 
 .recent-posts {
   display: grid;
@@ -663,48 +595,22 @@ layout: home
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 
+  box-shadow:
     0 4px 15px rgba(0, 212, 255, 0.5),
     0 0 20px rgba(0, 255, 136, 0.3);
   position: relative;
   overflow: hidden;
 }
 
-.card-badge::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, 
-    transparent 30%, 
-    rgba(255, 255, 255, 0.3) 50%, 
-    transparent 70%);
-  animation: badgeShine 2s linear infinite;
-}
-
-@keyframes badgeShine {
-  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-}
+/* 优化：移除 badgeShine 动画，减少性能消耗 */
 
 .card-icon {
   font-size: 1.8rem;
   filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.8));
-  animation: iconFloat 3s ease-in-out infinite;
   transition: all 0.3s;
 }
 
-.post-card.tech-card:hover .card-icon {
-  filter: drop-shadow(0 0 25px rgba(0, 255, 136, 1));
-  transform: scale(1.2) rotate(10deg);
-}
-
-@keyframes iconFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
+/* 优化：移除 iconFloat 动画，改为悬停时效果 */
 
 .post-card.tech-card h3 {
   color: #e2e8f0;
@@ -804,21 +710,16 @@ layout: home
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
+  background: linear-gradient(90deg,
+    transparent 0%,
     rgba(0, 150, 255, 0.2) 30%,
     rgba(0, 255, 136, 0.25) 50%,
     rgba(138, 43, 226, 0.2) 70%,
     transparent 100%);
-  animation: statsScan 4s linear infinite;
   filter: blur(15px);
 }
 
-
-@keyframes statsScan {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
+/* 优化：移除 statsScan 动画 */
 
 .stat-item {
   text-align: center;
@@ -880,18 +781,19 @@ layout: home
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 0.75rem;
-  text-shadow: 
+  text-shadow:
     0 0 20px rgba(0, 212, 255, 0.8),
     0 0 40px rgba(0, 255, 136, 0.6),
     0 0 60px rgba(168, 85, 247, 0.4);
   filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.6)) brightness(1.2);
   transition: all 0.4s ease;
-  animation: gradientShift 5s ease infinite;
   position: relative;
   z-index: 2;
   display: block;
   min-height: 1.2em;
 }
+
+/* 优化：移除 gradientShift 动画 */
 
 .stat-item:hover .stat-number {
   filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.6));
@@ -963,11 +865,12 @@ layout: home
   
   function createParticles() {
     particles = [];
-    const particleCount = Math.min(120, Math.floor((canvas.width * canvas.height) / 8000));
-    
+    // 优化：减少粒子数量 120 -> 50
+    const particleCount = Math.min(50, Math.floor((canvas.width * canvas.height) / 15000));
+
     // 检测是否为暗色模式
     const isDark = document.documentElement.classList.contains('dark');
-    
+
     for (let i = 0; i < particleCount; i++) {
       const colorType = Math.random();
       let color;
@@ -990,13 +893,13 @@ layout: home
           color = { r: 138, g: 43, b: 226 }; // 紫色
         }
       }
-      
+
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         radius: Math.random() * 3 + 0.8,
-        speedX: (Math.random() - 0.5) * 1.2,
-        speedY: (Math.random() - 0.5) * 1.2,
+        speedX: (Math.random() - 0.5) * 0.8, // 降低速度减少计算
+        speedY: (Math.random() - 0.5) * 0.8,
         opacity: Math.random() * 0.8 + 0.4,
         color: color,
         glow: Math.random() * 0.7 + 0.5,
@@ -1008,70 +911,30 @@ layout: home
   function drawParticles() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const time = Date.now() * 0.001;
-    
+
     particles.forEach((particle, i) => {
       // 更新位置
       particle.x += particle.speedX;
       particle.y += particle.speedY;
-      
+
       // 边界检测
       if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
       if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
-      
+
       // 脉冲效果
       const pulseSize = 1 + Math.sin(time * 2 + particle.pulse) * 0.3;
       const currentRadius = particle.radius * pulseSize;
       const currentOpacity = particle.opacity * (0.7 + Math.sin(time * 3 + particle.pulse) * 0.3);
-      
-      // 绘制粒子光晕 - 增强光效
-      const gradient = ctx.createRadialGradient(
-        particle.x, particle.y, 0,
-        particle.x, particle.y, currentRadius * 5
-      );
-      gradient.addColorStop(0, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity})`);
-      gradient.addColorStop(0.3, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity * 0.6})`);
-      gradient.addColorStop(0.6, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity * 0.3})`);
-      gradient.addColorStop(1, `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0)`);
-      
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, currentRadius * 5, 0, Math.PI * 2);
-      ctx.fillStyle = gradient;
-      ctx.fill();
-      
-      // 绘制粒子核心 - 增强亮度
+
+      // 绘制粒子核心 - 优化：移除 shadowBlur 提升性能
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, currentRadius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 1)`;
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, 0.8)`;
+      ctx.fillStyle = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${currentOpacity})`;
       ctx.fill();
-      ctx.shadowBlur = 0;
-      
-      // 绘制连线 - 增强可见性
-      particles.slice(i + 1).forEach(otherParticle => {
-        const dx = particle.x - otherParticle.x;
-        const dy = particle.y - otherParticle.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        if (distance < 150) {
-          const opacity = (1 - distance / 150) * 0.4;
-          const midR = Math.floor((particle.color.r + otherParticle.color.r) / 2);
-          const midG = Math.floor((particle.color.g + otherParticle.color.g) / 2);
-          const midB = Math.floor((particle.color.b + otherParticle.color.b) / 2);
-          
-          ctx.beginPath();
-          ctx.moveTo(particle.x, particle.y);
-          ctx.lineTo(otherParticle.x, otherParticle.y);
-          ctx.strokeStyle = `rgba(${midR}, ${midG}, ${midB}, ${opacity})`;
-          ctx.lineWidth = 2;
-          ctx.shadowBlur = 8;
-          ctx.shadowColor = `rgba(${midR}, ${midG}, ${midB}, ${opacity * 0.8})`;
-          ctx.stroke();
-          ctx.shadowBlur = 0;
-        }
-      });
     });
-    
+
+    // 优化：移除粒子连线（最耗性能的部分）
+
     animationId = requestAnimationFrame(drawParticles);
   }
   
@@ -1080,6 +943,22 @@ layout: home
     createParticles();
     drawParticles();
   }
+
+  // 优化：添加可见性检测，页面不可见时暂停动画
+  function handleVisibilityChange() {
+    if (document.hidden) {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    } else {
+      if (!animationId) {
+        drawParticles();
+      }
+    }
+  }
+
+  document.addEventListener('visibilitychange', handleVisibilityChange);
   
   window.addEventListener('resize', () => {
     resizeCanvas();

@@ -5,3 +5,7 @@ cache
 
 # 算法刷题测试文件夹
 docs/30-day-algorithm/test/
+
+# 备份文件
+*.backup*
+*.bak

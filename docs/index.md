@@ -40,15 +40,15 @@ layout: home
     </div>
   </a>
   
-  <a href="/java-learning/mybatis" class="post-card tech-card">
+  <a href="/java-learning/ddd-design" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">HOT</span>
         <span class="card-icon">☕</span>
       </div>
-      <h3>MyBatis 框架核心原理</h3>
-      <p>深入理解 MyBatis 工作原理、动态 SQL、缓存机制与插件原理</p>
+      <h3>领域驱动设计（DDD）核心思想</h3>
+      <p>领域驱动设计（Domain-Driven Design，简称 DDD）是由 Eric Evans 在 2003 年提出的一种软件设计方法论。它强调将业务领域作为软件设计的核心，通过建立统一的领域模型来...</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>

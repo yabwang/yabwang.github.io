@@ -54,7 +54,22 @@ layout: home
       </div>
     </div>
   </a>
-  
+
+  <a href="/ai/latest-developments" class="post-card tech-card">
+    <div class="card-glow"></div>
+    <div class="card-content">
+      <div class="card-header">
+        <span class="card-badge">NEW</span>
+        <span class="card-icon">🤖</span>
+      </div>
+      <h3>AI 最新进展</h3>
+      <p>探索人工智能领域的最新突破，包括大语言模型、多模态技术、Agent 应用等前沿技术进展。</p>
+      <div class="card-footer">
+        <span class="read-more">查看详情</span>
+      </div>
+    </div>
+  </a>
+
   <a href="/others/slow-sql-governance" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">

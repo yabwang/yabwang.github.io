@@ -131,6 +131,10 @@ const javaLearningSidebar = {
           link: '/java-learning/system-design-principles',
         },
         {
+          text: '领域驱动设计（DDD）',
+          link: '/java-learning/ddd-design',
+        },
+        {
           text: '常见场景设计',
           link: '/java-learning/system-design-scenarios',
         },

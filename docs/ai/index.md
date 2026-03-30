@@ -101,6 +101,12 @@ order: 1
 
 ## 🎯 学习路径
 
+### Agent 开发专项学习
+- **[🎯 Agent 面试准备](/ai/agent-interview/)**：6周系统学习路线 + 面试题库，面试+实战双管齐下
+- **[Agent 开发学习指南](/ai/agent-interview/learning-guide)**：每周详细任务与知识点详解
+- **[AI Agent 面试题库](/others/interview/ai-agent-interview-questions)**：30题完整面试题
+
+### LLM 基础学习
 1. **入门阶段**：理解 Transformer 架构和基础概念
 2. **进阶阶段**：掌握模型训练、微调和优化技术
 3. **实践阶段**：开发实际应用，解决具体问题

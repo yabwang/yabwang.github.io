@@ -174,6 +174,13 @@ const aiSidebar = {
       link: '/ai/latest-developments',
     },
     {
+      text: 'agent开发学习',
+      collapsed: false,
+      items: [
+        { text: '学习指南', link: '/ai/agent-interview/learning-guide' },
+      ],
+    },
+    {
       text: '基础理论',
       collapsed: false,
       items: [

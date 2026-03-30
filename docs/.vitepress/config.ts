@@ -212,6 +212,7 @@ const aiSidebar = {
             { text: 'Skills / Agent Skills', link: '/ai/agent-skills' },
             { text: 'MCP（Model Context Protocol）', link: '/ai/mcp' },
             { text: 'Agent 开发', link: '/ai/agent-development' },
+            { text: '多 Agent 独立部署与协作', link: '/ai/multi-agent-deployment' },
           ],
         },
         {

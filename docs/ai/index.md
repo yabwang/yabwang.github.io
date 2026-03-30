@@ -53,6 +53,7 @@ order: 1
   - **Skills / Agent Skills**：[可复用技能、技能编排与扩展](/ai/agent-skills)
   - **MCP（Model Context Protocol）**：[工具与资源的标准化协议、MCP 服务与客户端](/ai/mcp)
   - [Agent 开发](/ai/agent-development)
+  - [多 Agent 独立部署与协作](/ai/multi-agent-deployment)
   - [活文件理论 (Living Files)](/ai/philosophy/living-files-theory)
   - [OpenClaw 记忆系统架构](/ai/philosophy/openclaw-memory-architecture)
   - 多模态应用
@@ -105,6 +106,7 @@ order: 1
 - **[🎯 Agent 面试准备](/ai/agent-interview/)**：6周系统学习路线 + 面试题库，面试+实战双管齐下
 - **[Agent 开发学习指南](/ai/agent-interview/learning-guide)**：每周详细任务与知识点详解
 - **[AI Agent 面试题库](/others/interview/ai-agent-interview-questions)**：30题完整面试题
+- **[多 Agent 独立部署与协作](/ai/multi-agent-deployment)**：协议、架构与实战代码示例
 
 ### LLM 基础学习
 1. **入门阶段**：理解 Transformer 架构和基础概念

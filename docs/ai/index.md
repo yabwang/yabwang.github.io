@@ -109,6 +109,7 @@ order: 1
 - **[AI Agent 面试题库](/others/interview/ai-agent-interview-questions)**：30题完整面试题
 - **[多 Agent 独立部署与协作](/ai/multi-agent-deployment)**：协议、架构与实战代码示例
 - **[LangChain 调用外部工具实战](/ai/langchain-tools)**：Tools、Function Calling、MCP 集成
+- **[LangChain 开发实战指南](/ai/langchain-development)**：核心组件、LCEL、RAG、Agent 生产实践
 
 ### LLM 基础学习
 1. **入门阶段**：理解 Transformer 架构和基础概念

@@ -214,6 +214,7 @@ const aiSidebar = {
             { text: 'Agent 开发', link: '/ai/agent-development' },
             { text: '多 Agent 独立部署与协作', link: '/ai/multi-agent-deployment' },
             { text: 'LangChain 调用外部工具实战', link: '/ai/langchain-tools' },
+            { text: 'LangChain 开发实战指南', link: '/ai/langchain-development' },
           ],
         },
         {

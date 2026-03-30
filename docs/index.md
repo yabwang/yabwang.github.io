@@ -39,7 +39,7 @@ layout: home
       </div>
     </div>
   </a>
-  
+
   <a href="/java-learning/ddd-design" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
@@ -48,22 +48,37 @@ layout: home
         <span class="card-icon">☕</span>
       </div>
       <h3>领域驱动设计（DDD）核心思想</h3>
-      <p>领域驱动设计（Domain-Driven Design，简称 DDD）是由 Eric Evans 在 2003 年提出的一种软件设计方法论。它强调将业务领域作为软件设计的核心，通过建立统一的领域模型来...</p>
+      <p>领域驱动设计（Domain-Driven Design，简称 DDD）是由 Eric Evans 在 2003 年提出的一种软件设计方法论...</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
     </div>
   </a>
 
-  <a href="/ai/latest-developments" class="post-card tech-card">
+  <a href="/ai/agent-interview/" class="post-card tech-card">
     <div class="card-glow"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-badge">NEW</span>
         <span class="card-icon">🤖</span>
       </div>
-      <h3>AI 最新进展</h3>
-      <p>探索人工智能领域的最新突破，包括大语言模型、多模态技术、Agent 应用等前沿技术进展。</p>
+      <h3>Agent 面试准备</h3>
+      <p>🎯 6周系统学习路线 + 30道完整面试题，涵盖 Prompt Engineering、RAG、Function Calling、MCP 协议、Agent 评估与实战项目。</p>
+      <div class="card-footer">
+        <span class="read-more">查看详情</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/others/interview/ai-agent-interview-questions" class="post-card tech-card">
+    <div class="card-glow"></div>
+    <div class="card-content">
+      <div class="card-header">
+        <span class="card-badge">HOT</span>
+        <span class="card-icon">📝</span>
+      </div>
+      <h3>AI Agent 开发工程师模拟面试题</h3>
+      <p>30道完整面试题，涵盖 Java 核心、分布式架构、AI Agent 技术体系、系统设计四大模块，助力面试准备。</p>
       <div class="card-footer">
         <span class="read-more">查看详情</span>
       </div>
@@ -1045,3 +1060,6 @@ layout: home
   }
 })();
 </script>
+
+
+<!-- Test comment for code review agent -->

@@ -179,6 +179,7 @@ const aiSidebar = {
       items: [
         { text: '学习指南', link: '/ai/agent-interview/learning-guide' },
         { text: 'Learn Claude Code', link: '/ai/lear-claude-code/' },
+        { text: 'Agent 开发完整指南', link: '/ai/learn-claude-code-agent-guide' },
       ],
     },
     {

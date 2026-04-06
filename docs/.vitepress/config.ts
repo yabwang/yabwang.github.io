@@ -323,12 +323,30 @@ const othersSidebar = {
   ],
 };
 
+// GitHub 项目精选侧边栏配置
+const githubProjectsSidebar = {
+  '/github-projects/': [
+    {
+      text: '⭐ 热门 GitHub 项目',
+      link: '/github-projects/',
+    },
+    {
+      text: '同步与存储',
+      collapsed: false,
+      items: [
+        { text: 'Syncthing - P2P 文件同步', link: '/github-projects/syncthing' },
+      ],
+    },
+  ],
+};
+
 // 合并侧边栏配置，VitePress 会根据当前路径自动匹配
 const sidebar = {
   ...algorithmSidebar,
   ...javaLearningSidebar,
   ...aiSidebar,
   ...othersSidebar,
+  ...githubProjectsSidebar,
 };
 
 // 确保模块路径正确匹配（处理可能的路径格式差异）
@@ -349,6 +367,7 @@ function ensurePathMatch(sidebarConfig, targetSidebar) {
 
 ensurePathMatch(sidebar, javaLearningSidebar);
 ensurePathMatch(sidebar, aiSidebar);
+ensurePathMatch(sidebar, githubProjectsSidebar);
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -383,6 +402,7 @@ export default defineConfig({
       { text: '🚀 30天算法学习', link: '/30-day-algorithm/' },
       { text: '☕ Java 学习笔记', link: '/java-learning/' },
       { text: '🤖 AI 学习', link: '/ai/' },
+      { text: '⭐ GitHub 项目', link: '/github-projects/' },
       { text: '📝 随笔与杂记', link: '/others/' },
     ],
 

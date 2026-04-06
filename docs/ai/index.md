@@ -94,6 +94,8 @@ order: 1
 - **开发工具**
   - [Claude Code 使用技巧](/ai/claude-code-tips)
   - [Ghostty 终端使用技巧](/ai/ghostty-tips)
+  - [OpenCLI：AI Agent 浏览器控制工具](/ai/opencli)
+  - [CLI-Anything：软件自动化 CLI 生成](/ai/cli-anything)
 
 - **部署工具**
   - [Ollama](/ai/ollama)

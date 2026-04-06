@@ -1,5 +1,5 @@
 ---
-order: 27
+order: 3
 ---
 
 # CLI-Anything：让所有软件变成 AI Agent 可操控的工具

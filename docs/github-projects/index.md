@@ -11,8 +11,10 @@ order: 1
 ### 同步与存储
 - [Syncthing - P2P 文件同步工具](/github-projects/syncthing)
 
-### AI 与 LLM
-- [OpenClaw - 个人 AI 助手](/ai/philosophy/openclaw-memory-architecture)
+### AI 与 Agent 工具
+- [OpenCLI - AI Agent 浏览器控制工具](/github-projects/opencli) — 79+ 网站适配器，复用浏览器登录状态
+- [CLI-Anything - 软件自动化 CLI 生成](/github-projects/cli-anything) — 7 阶段自动生成，25+ 软件支持
+- [MCPorter - MCP 调用工具链](/github-projects/mcporter) — TypeScript/CLI 中调用 MCP 的完整解决方案
 
 ### 开发工具
 - 持续更新中...
@@ -21,4 +23,4 @@ order: 1
 
 ## 🤝 贡献
 
-如果你有推荐的项目，欢迎在 [GitHub Issues](https://github.com/yabwang/yabwang.github.io/issues) 中提出。
+如果你有推荐的项目，欢迎在 [GitHub Issues](https://github.com/yabwang.github.io/issues) 中提出。

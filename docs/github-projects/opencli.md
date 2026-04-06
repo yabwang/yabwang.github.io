@@ -1,5 +1,5 @@
 ---
-order: 26
+order: 2
 ---
 
 # OpenCLI：让 AI Agent 直接操控浏览器的新范式

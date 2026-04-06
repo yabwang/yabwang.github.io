@@ -96,6 +96,7 @@ order: 1
   - [Ghostty 终端使用技巧](/ai/ghostty-tips)
   - [OpenCLI：AI Agent 浏览器控制工具](/ai/opencli)
   - [CLI-Anything：软件自动化 CLI 生成](/ai/cli-anything)
+  - [MCPorter：MCP 调用工具链](/ai/mcporter)
 
 - **部署工具**
   - [Ollama](/ai/ollama)

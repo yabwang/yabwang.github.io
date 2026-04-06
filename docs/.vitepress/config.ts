@@ -341,6 +341,7 @@ const githubProjectsSidebar = {
       text: 'AI 与 Agent 工具',
       collapsed: false,
       items: [
+        { text: 'Hello-Agents - 智能体系统教程', link: '/github-projects/hello-agents' },
         { text: 'OpenCLI - AI Agent 浏览器控制', link: '/github-projects/opencli' },
         { text: 'CLI-Anything - 软件自动化 CLI 生成', link: '/github-projects/cli-anything' },
         { text: 'MCPorter - MCP 调用工具链', link: '/github-projects/mcporter' },

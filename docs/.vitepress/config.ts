@@ -373,9 +373,16 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Yabin\'s Tech Journey',
   description: '算法、java、AI',
-  
+
   // 禁用主题切换，强制使用深色模式
   appearance: false,
+
+  // 忽略 localhost 链接（本地服务地址）
+  ignoreDeadLinks: [
+    // 忽略所有 localhost 链接
+    /^https?:\/\/localhost/,
+    /^https?:\/\/127\.0\.0\.1/,
+  ],
   
   head: [
     ['meta', { name: 'keywords', content: '技术博客,算法,系统设计,数据库,LeetCode' }],

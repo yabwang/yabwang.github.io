@@ -93,6 +93,7 @@ order: 1
 
 - **开发工具**
   - [Claude Code 使用技巧](/ai/claude-code-tips)
+  - [GSD (Get Shit Done) 工作流系统](/ai/gsd-system)
   - [Ghostty 终端使用技巧](/ai/ghostty-tips)
 
 - **部署工具**

@@ -261,6 +261,7 @@ const aiSidebar = {
           collapsed: false,
           items: [
             { text: 'Claude Code 使用技巧', link: '/ai/claude-code-tips' },
+            { text: 'GSD (Get Shit Done) 工作流系统', link: '/ai/gsd-system' },
             { text: 'Ghostty 终端使用技巧', link: '/ai/ghostty-tips' },
           ],
         },
